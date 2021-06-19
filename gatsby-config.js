@@ -24,12 +24,12 @@ module.exports = {
         trackingId: process.env.GA_TRACKING_ID,
       },
     },
-    {
-      resolve: "gatsby-plugin-facebook-pixel",
-      options: {
-        pixelId: process.env.FACEBOOK_PIXEL_ID,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-facebook-pixel",
+    //   options: {
+    //     pixelId: process.env.FACEBOOK_PIXEL_ID,
+    //   },
+    // },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -42,16 +42,16 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        // defaultLayouts: {
-        //   posts: require.resolve("./src/templates/project-details.js"),
-        //   default: require.resolve("./src/templates/default-page-layout.js"),
-        // },
-        extensions: [`.mdx`, `.md`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     defaultLayouts: {
+    //       posts: require.resolve("./src/templates/project-details.js"),
+    //       default: require.resolve("./src/templates/default-page-layout.js"),
+    //     },
+    //     extensions: [`.mdx`, `.md`],
+    //   },
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
