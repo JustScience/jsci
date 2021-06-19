@@ -1,13 +1,33 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: "jsci",
+    title: "Melody Loops, VST Presets & DAW Templates",
+    titleTemplate: ' | JustScience',
+    description: "Melody Loops, VST Presets & DAW Templates",
+    keywords: "Melody Loop Samples",
+    copyright: "Copyright 2021, Galenti Consulting, LLC. All rights reserved.",
+    author: "J Galenti",
+    contact: "jscibeats@gmail.com",
+    siteUrl: "https://jsci.me", // No trailing slash allowed!
+    image: "/images/socialThumb.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@jscibeats",
   },
   plugins: [
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-38710149-3",
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-facebook-pixel",
+      options: {
+        pixelId: process.env.FACEBOOK_PIXEL_ID,
       },
     },
     "gatsby-plugin-sharp",
@@ -22,6 +42,16 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          posts: require.resolve("./src/templates/project-details.js"),
+          default: require.resolve("./src/templates/default-page-layout.js"),
+        },
+        extensions: [`.mdx`, `.md`],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
