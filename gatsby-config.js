@@ -22,12 +22,12 @@ module.exports = {
         pixelId: process.env.FACEBOOK_PIXEL_ID,
       },
     },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: process.env.GA_TRACKING_ID,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: process.env.GA_TRACKING_ID,
+    //   },
+    // },
     `gatsby-plugin-gatsby-cloud`,
     "gatsby-plugin-image",
     {
