@@ -15,15 +15,33 @@ module.exports = {
     twitterUsername: "@jscibeats",
   },
   plugins: [
-    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-styled-components",
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: process.env.GA_TRACKING_ID,
-    //   },
-    // },
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
+    `gatsby-plugin-gatsby-cloud`,
+    "gatsby-plugin-image",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {}
+        }
+      }
+    },   
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
@@ -33,7 +51,21 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/templates/default-page-layout.js"),
+        },
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `./src/pages/projects`,
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
