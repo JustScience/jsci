@@ -76,6 +76,14 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "freebies",
+        path: "./src/freebies/",
+      },
+      __key: "freebies",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "images",
         path: "./src/images/",
       },

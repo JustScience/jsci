@@ -5,4 +5,6 @@ html,body {
     color: white;
 }
 
-h1,h2,h3,h4,h5,h6,p {margin-top: 0;}
+a:any-link {color:blanchedalmond;text-decoration:none;}
+ul {list-style:none;padding:0;}
+h1,h2,h3,h4,h5,h6,p {margin-top:0;}
