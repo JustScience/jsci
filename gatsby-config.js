@@ -17,6 +17,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: process.env.FACEBOOK_PIXEL_ID,
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: process.env.GA_TRACKING_ID,
