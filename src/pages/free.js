@@ -1,4 +1,3 @@
-
 import * as React from "react"
 
 export default function Free() {
@@ -20,15 +19,6 @@ export default function Free() {
             </label>
             <input name="email" id="email" type="email" />
         </div>
-        {/* <div style={{ marginBottom: `24px` }}>
-            <label
-                style={{ display: `block`, marginBottom: `4px` }}
-                htmlFor="message"
-            >
-                Message:
-            </label>
-            <textarea name="message" id="message" />
-        </div> */}
         <div>
             <button>Send Message</button>
         </div>

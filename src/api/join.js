@@ -1,5 +1,4 @@
 const Airtable = require("airtable")
-
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
   //Your API Key from Airtable
@@ -27,7 +26,7 @@ const handler = (req, res) => {
                     fields: {
                         Name: data.name,
                         Email: data.email,
-                        // Message: data.message,
+                        Tag: data.tag,
                     },
                 },
             ],
@@ -38,7 +37,9 @@ const handler = (req, res) => {
                         error: err.message,
                     })
                 } else {
-                    res.json({ message: `Message Submitted` })
+                    // res.json({ message: `Message Submitted` })
+                    console.log('New Customer Added')
+                    res.redirect('/download')
                 }
             }
         )
