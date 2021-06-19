@@ -39,7 +39,7 @@ const handler = (req, res) => {
                 } else {
                     // res.json({ message: `Message Submitted` })
                     console.log('New Customer Added')
-                    res.redirect('/download')
+                    res.redirect('/success')
                 }
             }
         )
