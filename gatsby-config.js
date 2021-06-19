@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `./src/pages/projects`,
+        path: `./src/pages/products`,
       },
     },
     "gatsby-transformer-sharp",
