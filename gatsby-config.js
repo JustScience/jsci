@@ -12,7 +12,7 @@ module.exports = {
     author: "J Galenti",
     contact: "jscibeats@gmail.com",
     siteUrl: "https://jsci.me", // No trailing slash allowed!
-    image: "/images/socialThumb.jpg", // Path to your image you placed in the 'static' folder
+    // image: "/images/socialThumb.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@jscibeats",
   },
   plugins: [
