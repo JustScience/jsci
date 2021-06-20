@@ -1,8 +1,16 @@
 import * as React from "react"
+import Layout from './../components/Layout'
+import Hero from './../components/Hero'
 import Join from './../components/Join'
+import FormCTA from './../components/FormCTA'
 
-export default function FreeMelodyLoops() {
+export default function FreeBackgroundMusic() {
     return (
-        <Join tag="Creator" gift="Tracks" />
+        <Layout>
+            <Hero />
+            <FormCTA>
+                <Join tag="Creator" gift="Tracks" />
+            </FormCTA>
+        </Layout>
     )
 }

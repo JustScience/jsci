@@ -1,11 +1,11 @@
 import React from 'react'
-import { JoinWrap, FormWrap, FormField } from './style'
+import { JoinWrap, FormWrap, FormTitle, FormField } from './style'
 
 export default function Join({tag, gift}) {
     return (
         <JoinWrap>
             <FormWrap action="/api/join" method="POST">
-                <h2>Get FREE {gift}!!</h2>
+                <FormTitle>Get Free {gift}!!</FormTitle>
                 <FormField>
                     <label htmlFor="name">Name:</label>
                     <input name="name" id="name" />
@@ -16,7 +16,7 @@ export default function Join({tag, gift}) {
                 </FormField>
                 <input name="tag" id="tag" type="hidden" value={tag} />
                 <FormField>
-                    <button>Gimme My {gift}</button>
+                    <button>Get Free {gift}</button>
                 </FormField>
             </FormWrap>
         </JoinWrap>

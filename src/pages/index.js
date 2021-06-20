@@ -1,19 +1,21 @@
-import { Link } from "gatsby"
 import * as React from "react"
+import Layout from './../components/Layout'
+import Hero from './../components/Hero'
+import Banner from './../components/Banner'
+import Button from './../components/Button'
 import './../styles/global.css'
-
 
 // markup
 const IndexPage = () => {
   return (
-    <main>
-      <h1>it's JustScience</h1>
-      <ul>
-        <li><Link to="/free-melody-loops">Free Melody Loops</Link></li>
-        <li><Link to="/free-trap-beats">Free Trap Beats</Link></li>
-        <li><Link to="/free-background-music">Free Background Music</Link></li>
-      </ul>
-    </main>
+    <Layout>
+      <Hero />
+      <Banner imageBG="BannerBG1">
+        <Button to="/free-melody-loops">Free Melody Loops</Button>
+        <Button to="/free-trap-beats">Free Trap Beats</Button>
+        <Button to="/free-background-music">Free Background Music</Button>
+      </Banner>
+    </Layout>
   )
 }
 
