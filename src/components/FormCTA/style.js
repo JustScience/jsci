@@ -17,15 +17,14 @@ const FormCTA = styled.div`
     justify-content: center;
 `
 const FormCTAImage = styled.div`
-    background-repeat: none;
     display: none;
     height: 300px;
     width: 300px;
 
     ${media.tablet`
         background-image: url(${formCTAImage});
+        background-repeat: no-repeat;
         background-position: center;
-        background-repeat: none;
         background-size: contain;
         display: flex;
     `};
