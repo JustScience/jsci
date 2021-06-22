@@ -1,15 +1,26 @@
 import styled from 'styled-components'
+import media from '../Responsive/media'
 
 const KitList = styled.ul`
     display: grid;
     gap: 8px;
-    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 1080px;
+
+    ${media.tabletSM`
+        grid-template-columns: 2fr 2fr;
+    `};
+    ${media.tablet`
+        grid-template-columns: 3fr 3fr 3fr;
+    `};
 `
 const KitCardWrap = styled.a.attrs( props => {
     return {
-      href: props.href ? props.href : '#',
-      rel: 'noopener noreferrer',
-      target: '_blank'
+        href: props.href ? props.href : '#',
+        rel: 'noopener noreferrer',
+        target: '_blank'
     }
 })`
     background-color: rgba(255,255,255,0.15);
