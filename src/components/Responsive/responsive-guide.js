@@ -7,7 +7,7 @@ const ResponsiveGuide = styled.div`
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(12px);
     border-radius: 24px;
-    bottom: 9px;
+    bottom: 24px;
     color: #ffffff;
     font-size: 120%;
     font-weight: 600;

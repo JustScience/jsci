@@ -1,21 +1,39 @@
 import * as React from "react"
+import Layout from './../components/Layout'
+import Hero from './../components/Hero'
+import Section from './../components/Section'
+import FormCTA from './../components/FormCTA'
+import Form from './../components/Form'
+import { FormField } from './../components/Form/style'
 
 export default function SendGridUI() {
   return (
-    <form action="/api/sendgrid" method="POST">
-      <h2>Send Me an Email</h2>
-      <p>Please include your name and contact information.</p>
-      <div>
-        <label htmlFor="subject">Subject:</label>
-        <input name="subject" id="subject" />
-      </div>
-      <div>
-        <label htmlFor="text">Message:</label>
-        <textarea name="text" id="text" />
-      </div>
-      <div>
-        <button>Send Email</button>
-      </div>
-    </form>
+    <>
+      <Layout>
+        <Hero />
+        <Section>
+          <FormCTA>
+            <Form 
+              title="Send Me an Email" 
+              instruction="Please include name and contact info" 
+              action="/api/sendgrid" 
+              method="POST"
+            >
+              <FormField>
+                <label htmlFor="subject">Subject:</label>
+                <input name="subject" id="subject" />
+              </FormField>
+              <FormField>
+                <label htmlFor="text">Message:</label>
+                <textarea name="text" id="text" />
+              </FormField>
+              <FormField>
+                <button>Send Email</button>
+              </FormField>
+            </Form>
+          </FormCTA>
+        </Section>
+      </Layout>
+    </>
   )
 }

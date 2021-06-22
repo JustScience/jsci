@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonWrap from './style'
+import { ButtonWrap } from './style'
 
 export default function Button({to, children}) {
     return (

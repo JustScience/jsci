@@ -61,9 +61,8 @@ const NavItem = styled(GatsbyLink)`
     transition: all 333ms ease-in;
 
     &:hover {
-        background-color: ${color.grey.offWhite};
+        background-color: ${color.primary.base};
         box-shadow: 0 4px 9px -6px ${color.shadow.base};
-        color: ${color.primary.light};
     }
 `
 

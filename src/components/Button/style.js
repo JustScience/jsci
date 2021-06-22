@@ -12,5 +12,16 @@ const ButtonWrap = styled(GatsbyLink)`
         background-color: rgba(255,255,255,0.3);
     }
 `
+const HrefWrap = styled.a`
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    padding: 12px 24px;
+    transition: background-color 240ms ease-in-out;
 
-export default ButtonWrap
+    &:hover {
+        background-color: rgba(255,255,255,0.3);
+    }
+`
+
+export { ButtonWrap, HrefWrap}

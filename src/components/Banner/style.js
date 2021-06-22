@@ -9,7 +9,7 @@ const BannerWrap = styled.section`
     padding: 12px;
     width: 100%;
 
-    ${media.tablet`
+    ${media.tabletSM`
         align-items: center;
         display: flex;
         flex-direction: row;
