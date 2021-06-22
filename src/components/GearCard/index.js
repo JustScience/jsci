@@ -1,10 +1,10 @@
 import React from 'react'
-import { KitCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory } from './style'
+import { GearCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory } from './style'
 import gearImage from '../../images/banner-bg-1.png'
 
 export default function KitCard({title, brand, category, href, children}) {
     return (
-        <KitCardWrap href={href}>
+        <GearCardWrap href={href}>
             <GearThumbnail image={gearImage} />
             <GearInfo>
                 <div>
@@ -16,6 +16,6 @@ export default function KitCard({title, brand, category, href, children}) {
                     {children}
                 </GearCategory>
             </GearInfo>
-        </KitCardWrap>
+        </GearCardWrap>
     )
 }

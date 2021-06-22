@@ -2,8 +2,8 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
-import KitCard from '../../components/KitCard'
-import { KitList } from '../../components/KitCard/style'
+import GearCard from '../../components/GearCard'
+import { GearList } from '../../components/GearCard/style'
 
 export const query = graphql`
     query FilmKitList {
@@ -30,16 +30,16 @@ export default function FilmKit({data}) {
     return (
         <Layout>
             <Hero />
-            <KitList>
+            <GearList>
                 {items.map(item => (
-                    <KitCard 
+                    <GearCard 
                         key={item.node.id}
                         href={item.node.data.URL}
                         title={item.node.data.Name}
                         brand={item.node.data.Brand}>
-                    </KitCard>
+                    </GearCard>
                 ))}
-            </KitList>
+            </GearList>
         </Layout>
     )
 }

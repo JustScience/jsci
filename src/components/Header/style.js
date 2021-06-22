@@ -1,6 +1,7 @@
 import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
-import color from './../Theme/Color'
+import color from '../Theme/Color'
+import media from '../Responsive/media'
 
 const HeaderWrap = styled.nav`
     align-items: center;
@@ -43,7 +44,14 @@ const LogoIcon = styled.span`
 `
 const LogoText = styled.span`
     color: ${color.grey.offWhite};
+    display: none;
     font-size: 1em;
+    visibility: hidden;
+
+    ${media.tabletSM`
+        display: block;
+        visibility: visible;
+    `};
 `
 const NavWrap = styled.nav`
     align-items: center;

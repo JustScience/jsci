@@ -3,8 +3,8 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
 import PageTitle from '../../components/PageTitle'
-import KitCard from '../../components/KitCard'
-import { KitList } from '../../components/KitCard/style'
+import GearCard from '../../components/GearCard'
+import { GearList } from '../../components/GearCard/style'
 
 export default function MusicKit({data}) {
     const hardware = data.hardware.edges
@@ -14,29 +14,29 @@ export default function MusicKit({data}) {
         <Layout>
             <Hero />
             <PageTitle title="Music Studio Hardware"/>
-            <KitList>
+            <GearList>
                 {hardware.map(item => (
-                    <KitCard 
+                    <GearCard 
                         key={item.node.id}
                         href={item.node.data.URL}
                         title={item.node.data.Name}
                         brand={item.node.data.Brand}
                         category={item.node.data.Category}>
-                    </KitCard>
+                    </GearCard>
                 ))}
-            </KitList>
+            </GearList>
             <PageTitle title="Music Studio Software"/>
-            <KitList>
+            <GearList>
                 {software.map(item => (
-                    <KitCard 
+                    <GearCard 
                         key={item.node.id}
                         href={item.node.data.URL}
                         title={item.node.data.Name}
                         brand={item.node.data.Brand}
                         category={item.node.data.Category}>
-                    </KitCard>
+                    </GearCard>
                 ))}
-            </KitList>            
+            </GearList>            
         </Layout>
     )
 }

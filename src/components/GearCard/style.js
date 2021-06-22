@@ -2,7 +2,7 @@ import { GatsbyImage as StyledImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import media from '../Responsive/media'
 
-const KitList = styled.ul`
+const GearList = styled.ul`
     display: grid;
     gap: 8px;
     grid-template-columns: 1fr;
@@ -17,7 +17,7 @@ const KitList = styled.ul`
         grid-template-columns: 3fr 3fr 3fr;
     `};
 `
-const KitCardWrap = styled.a.attrs( props => {
+const GearCardWrap = styled.a.attrs( props => {
     return {
         href: props.href ? props.href : '#',
         rel: 'noopener noreferrer',
@@ -67,4 +67,4 @@ const GearCategory = styled.p`
     color: rgba(255,255,255,0.48);
 `
 
-export { KitList, KitCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory }
+export { GearList, GearCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory }
