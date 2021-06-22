@@ -1,7 +1,6 @@
 import React from 'react'
-// import GlobalStyle from '../Theme/Global'
 import Header from '../Header'
-// import Footer from '../Footer'
+import Footer from '../Footer'
 import Responsive from '../Responsive'
 import LayoutWrap from './style'
 
@@ -11,7 +10,7 @@ export default function Layout({ children }) {
             <LayoutWrap>
                 <Header />
                 { children }
-                {/* <Footer /> */}
+                <Footer />
             </LayoutWrap>
             <Responsive /> 
         </>

@@ -9,10 +9,10 @@ const KitList = styled.ul`
     padding: 24px;
     max-width: 1080px;
 
-    ${media.tabletSM`
+    ${media.tablet`
         grid-template-columns: 2fr 2fr;
     `};
-    ${media.tablet`
+    ${media.laptopSM`
         grid-template-columns: 3fr 3fr 3fr;
     `};
 `
