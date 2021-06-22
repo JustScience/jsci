@@ -5,7 +5,7 @@ import gearImage from '../../images/banner-bg-1.png'
 export default function KitCard({title, brand, category, href, children}) {
     return (
         <GearCardWrap href={href}>
-            <GearThumbnail image={gearImage} />
+            <GearThumbnail src={gearImage} />
             <GearInfo>
                 <div>
                     <GearTitle>{title}</GearTitle>

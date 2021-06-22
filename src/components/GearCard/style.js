@@ -1,4 +1,3 @@
-import { GatsbyImage as StyledImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import media from '../Responsive/media'
 
@@ -38,7 +37,7 @@ const GearCardWrap = styled.a.attrs( props => {
         background-color: rgba(255,255,255,0.3);
     }
 `
-const GearThumbnail = styled(StyledImage)`
+const GearThumbnail = styled.img`
     background-color: black;
     height: 120px;
     width: 120px;
