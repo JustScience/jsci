@@ -36,7 +36,8 @@ export default function FilmKit({data}) {
                         key={item.node.id}
                         href={item.node.data.URL}
                         title={item.node.data.Name}
-                        brand={item.node.data.Brand}>
+                        brand={item.node.data.Brand}
+                        category={item.node.data.Category}>
                     </GearCard>
                 ))}
             </GearList>
