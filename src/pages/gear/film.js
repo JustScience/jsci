@@ -34,9 +34,9 @@ export default function FilmKit({data}) {
                 {items.map(item => (
                     <KitCard 
                         key={item.node.id}
-                        href={item.node.data.URL}>
-                        <h4>{item.node.data.Name}</h4>
-                        <p>{item.node.data.Brand}</p>
+                        href={item.node.data.URL}
+                        title={item.node.data.Name}
+                        brand={item.node.data.Brand}>
                     </KitCard>
                 ))}
             </KitList>

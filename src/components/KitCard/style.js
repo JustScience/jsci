@@ -1,3 +1,4 @@
+import { GatsbyImage as StyledImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import media from '../Responsive/media'
 
@@ -37,5 +38,33 @@ const KitCardWrap = styled.a.attrs( props => {
         background-color: rgba(255,255,255,0.3);
     }
 `
+const GearThumbnail = styled(StyledImage)`
+    background-color: black;
+    height: 120px;
+    width: 120px;
+`
+const GearInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
 
-export { KitList, KitCardWrap }
+    p {
+        font-size: 0.75em;
+        font-weight: 300;
+    }
+`
+const GearTitle = styled.h4`
+    font-size: 1.2em;
+    font-weight: 600;
+`
+const GearBrand = styled.h5`
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9em;
+    font-weight: 400;
+`
+const GearCategory = styled.p`
+    color: rgba(255,255,255,0.48);
+`
+
+export { KitList, KitCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory }

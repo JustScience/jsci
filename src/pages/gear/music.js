@@ -18,9 +18,10 @@ export default function MusicKit({data}) {
                 {hardware.map(item => (
                     <KitCard 
                         key={item.node.id}
-                        href={item.node.data.URL}>
-                        <h4>{item.node.data.Name}</h4>
-                        <p>{item.node.data.Brand}</p>
+                        href={item.node.data.URL}
+                        title={item.node.data.Name}
+                        brand={item.node.data.Brand}
+                        category={item.node.data.Category}>
                     </KitCard>
                 ))}
             </KitList>
@@ -29,9 +30,10 @@ export default function MusicKit({data}) {
                 {software.map(item => (
                     <KitCard 
                         key={item.node.id}
-                        href={item.node.data.URL}>
-                        <h4>{item.node.data.Name}</h4>
-                        <p>{item.node.data.Brand}</p>
+                        href={item.node.data.URL}
+                        title={item.node.data.Name}
+                        brand={item.node.data.Brand}
+                        category={item.node.data.Category}>
                     </KitCard>
                 ))}
             </KitList>            
