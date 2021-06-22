@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `./src/pages/products`,
+        path: `./src/pages/products/`,
       },
     },
     "gatsby-transformer-sharp",
@@ -97,5 +97,22 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY, // may instead specify via env, see below
+        concurrency: 5, // default, see using markdown and attachments for more information
+        tables: [
+          {
+            baseId: process.env.AIRTABLE_DB,
+            tableName: `Kit`,
+          },
+          {
+            baseId: process.env.AIRTABLE_DB,
+            tableName: `Freebies`,
+          }
+        ]
+      }
+    },    
   ],
 };

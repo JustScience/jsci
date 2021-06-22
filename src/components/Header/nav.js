@@ -10,9 +10,10 @@ const activeStyle = {
 export default function HeaderNav() {
     return (
         <NavWrap>
-            <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
+            <NavItem to="/kit" activeStyle={activeStyle}>Kits</NavItem>
             <NavItem to="/links" activeStyle={activeStyle}>Links</NavItem>
-            <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem>
+            <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
+            {/* <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem> */}
         </NavWrap>
     )
 }
