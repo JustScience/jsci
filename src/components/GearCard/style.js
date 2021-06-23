@@ -37,7 +37,7 @@ const GearCardWrap = styled.a.attrs( props => {
         background-color: rgba(255,255,255,0.3);
     }
 `
-const GearThumbnail = styled.img`
+const GearThumbnail = styled.div`
     background-color: black;
     height: 120px;
     width: 120px;
