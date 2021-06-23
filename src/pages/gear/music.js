@@ -35,7 +35,8 @@ export default function MusicKit({data}) {
                         href={item.node.data.URL}
                         title={item.node.data.Name}
                         brand={item.node.data.Brand}
-                        category={item.node.data.Category}>
+                        category={item.node.data.Category}
+                        image={item.node.data.Image[0].url}>
                     </GearCard>
                 ))}
             </GearList>            
@@ -80,6 +81,9 @@ export const query = graphql`
                         Task
                         Type
                         URL
+                        Image {
+                            url
+                        }
                     }
                     id
                 }
