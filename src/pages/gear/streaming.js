@@ -2,6 +2,8 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
+import PageTitle from '../../components/PageTitle'
+import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
@@ -11,6 +13,13 @@ export default function StreamKit({data}) {
     return (
         <Layout>
             <Hero />
+            <PageTitle 
+                title="Live Streaming Gear"
+                subtitle="Here's a list of my favorite livestream gear and accessories. Many links are affiliated, so using this page to shop for streaming gear helps to continue content production."
+            />
+            <SectionTitle 
+                title="Livestream Hardware"
+            />
             <GearList>
                 {items.map(item => (
                     <GearCard 

@@ -3,18 +3,24 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
 import PageTitle from '../../components/PageTitle'
+import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
 export default function MusicKit({data}) {
     const hardware = data.hardware.edges
     const software = data.software.edges
-    console.log(hardware)
      
     return (
         <Layout>
             <Hero />
-            <PageTitle title="Music Studio Hardware"/>
+            <PageTitle 
+                title="Music Studio Gear"
+                subtitle="Here's a list of my favorite music recording gear and mixing plugins. Many links are affiliated, so using this page to shop for music gear helps to continue content production."
+            />
+            <SectionTitle 
+                title="Music Production Hardware"
+            />
             <GearList>
                 {hardware.map(item => (
                     <GearCard 
@@ -27,7 +33,9 @@ export default function MusicKit({data}) {
                     </GearCard>
                 ))}
             </GearList>
-            <PageTitle title="Music Studio Software"/>
+            <SectionTitle 
+                title="Music Production Software"
+            />
             <GearList>
                 {software.map(item => (
                     <GearCard 

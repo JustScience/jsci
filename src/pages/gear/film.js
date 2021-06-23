@@ -2,6 +2,8 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
+import PageTitle from '../../components/PageTitle'
+import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
@@ -11,6 +13,13 @@ export default function FilmKit({data}) {
     return (
         <Layout>
             <Hero />
+            <PageTitle 
+                title="YouTube Studio Gear"
+                subtitle="Here's a list of my favorite filmmaking gear and accessories. Many links are affiliated, so using this page to shop for video gear helps to continue content production."
+            />
+            <SectionTitle 
+                title="Video Production Hardware"
+            />
             <GearList>
                 {items.map(item => (
                     <GearCard 

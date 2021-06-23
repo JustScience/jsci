@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const PageTitleWrap = styled.div`
+const SectionTitleWrap = styled.div`
     padding: 24px;
 
-    h1,p {
+    h2,p {
         line-height:120%;
         margin: 0 auto;
         margin-bottom: 8px;
@@ -16,4 +16,4 @@ const PageTitleWrap = styled.div`
     }
 `
 
-export default PageTitleWrap
+export default SectionTitleWrap
