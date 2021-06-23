@@ -5,8 +5,6 @@ import Hero from './../components/Hero'
 import Banner from './../components/Banner'
 import Button from './../components/Button'
 
-import './../styles/global.css'
-
 // markup
 const IndexPage = () => {
   return (
