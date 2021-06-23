@@ -1,10 +1,10 @@
 import React from 'react'
 import { GearCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory } from './style'
 
-export default function KitCard({title, brand, category, href, children}) {
+export default function GearCard({ image, title, brand, category, href, children }) {
     return (
         <GearCardWrap href={href}>
-            <GearThumbnail />
+            <GearThumbnail src={image} />
             <GearInfo>
                 <div>
                     <GearTitle>{title}</GearTitle>

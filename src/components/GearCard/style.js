@@ -37,10 +37,9 @@ const GearCardWrap = styled.a.attrs( props => {
         background-color: rgba(255,255,255,0.3);
     }
 `
-const GearThumbnail = styled.div`
+const GearThumbnail = styled.img`
     background-color: black;
     height: 120px;
-    width: 120px;
 `
 const GearInfo = styled.div`
     display: flex;
@@ -48,9 +47,10 @@ const GearInfo = styled.div`
     justify-content: space-between;
     text-align: right;
 
-    p {
+    p,h3 {
         font-size: 0.75em;
         font-weight: 300;
+        margin: 0;
     }
 `
 const GearTitle = styled.h4`
@@ -62,7 +62,7 @@ const GearBrand = styled.h5`
     font-size: 0.9em;
     font-weight: 400;
 `
-const GearCategory = styled.p`
+const GearCategory = styled.h3`
     color: rgba(255,255,255,0.48);
 `
 

@@ -9,6 +9,7 @@ import { GearList } from '../../components/GearCard/style'
 export default function MusicKit({data}) {
     const hardware = data.hardware.edges
     const software = data.software.edges
+    console.log(hardware)
      
     return (
         <Layout>
@@ -21,7 +22,8 @@ export default function MusicKit({data}) {
                         href={item.node.data.URL}
                         title={item.node.data.Name}
                         brand={item.node.data.Brand}
-                        category={item.node.data.Category}>
+                        category={item.node.data.Category}
+                        image={item.node.data.Image[0].url}>
                     </GearCard>
                 ))}
             </GearList>
@@ -44,7 +46,10 @@ export default function MusicKit({data}) {
 
 export const query = graphql`
     query MusicKitList {
-        hardware: allAirtable(filter: {table: {eq: "Kit"}, data: {Task: {eq: "Music"}, Type: {eq: "Hardware"}}}) {
+        hardware: allAirtable(
+            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Music"}, Type: {eq: "Hardware"}}}
+            sort: {order: ASC, fields: data___Category}
+        ) {
             edges {
                 node {
                     data {
@@ -54,12 +59,18 @@ export const query = graphql`
                         Task
                         Type
                         URL
+                        Image {
+                            url
+                        }
                     }
                     id
                 }
             }
         },
-        software: allAirtable(filter: {table: {eq: "Kit"}, data: {Task: {eq: "Music"}, Type: {eq: "Software"}}}) {
+        software: allAirtable(
+            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Music"}, Type: {eq: "Software"}}}
+            sort: {order: ASC, fields: data___Category}
+        ) {
             edges {
                 node {
                     data {

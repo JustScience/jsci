@@ -5,25 +5,6 @@ import Hero from '../../components/Hero'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export const query = graphql`
-    query StreamKitList {
-        allAirtable(filter: {table: {eq: "Kit"}, data: {Task: {eq: "Streaming"}}}) {
-            edges {
-                node {
-                    data {
-                        Name
-                        Brand
-                        Category
-                        Task
-                        Type
-                        URL
-                    }
-                    id
-                }
-            }
-        }
-    }
-`
 export default function StreamKit({data}) {
     const items = data.allAirtable.edges
      
@@ -44,3 +25,26 @@ export default function StreamKit({data}) {
         </Layout>
     )
 }
+
+export const query = graphql`
+    query StreamKitList {
+        allAirtable(
+            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Streaming"}}}
+            sort: {order: ASC, fields: data___Category}
+        ) {
+            edges {
+                node {
+                    data {
+                        Name
+                        Brand
+                        Category
+                        Task
+                        Type
+                        URL
+                    }
+                    id
+                }
+            }
+        }
+    }
+`

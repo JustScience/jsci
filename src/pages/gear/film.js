@@ -5,25 +5,6 @@ import Hero from '../../components/Hero'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export const query = graphql`
-    query FilmKitList {
-        allAirtable(filter: {table: {eq: "Kit"}, data: {Task: {eq: "Film"}}}) {
-            edges {
-                node {
-                    data {
-                        Name
-                        Brand
-                        Category
-                        Task
-                        Type
-                        URL
-                    }
-                    id
-                }
-            }
-        }
-    }
-`
 export default function FilmKit({data}) {
     const items = data.allAirtable.edges
      
@@ -44,3 +25,26 @@ export default function FilmKit({data}) {
         </Layout>
     )
 }
+
+export const query = graphql`
+    query FilmKitList {
+        allAirtable(
+            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Film"}}}
+            sort: {order: ASC, fields: data___Category}
+        ) {
+            edges {
+                node {
+                    data {
+                        Name
+                        Brand
+                        Category
+                        Task
+                        Type
+                        URL
+                    }
+                    id
+                }
+            }
+        }
+    }
+`
