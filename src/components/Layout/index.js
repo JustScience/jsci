@@ -4,7 +4,7 @@ import Footer from '../Footer'
 // import Responsive from '../Responsive'
 import LayoutWrap from './style'
 
-import './../styles/global.css'
+import '../../styles/global.css'
 
 export default function Layout({ children }) {
     return (
