@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import color from './../Theme/Color'
 import media from './../Responsive/media'
-import heroBG from './../../images/hero-bg.png'
+import heroBGSmall from './../../images/hero-bg-sml.jpg'
+import heroBGMed from './../../images/hero-bg-med.jpg'
+import heroBG from './../../images/hero-bg.jpg'
 
 const HeroWrap = styled.section`
     align-items: center;
-    background-image: url(${heroBG});
+    background-image: url(${heroBGSmall});
     background-repeat: none;
     background-position: center;
     background-size: cover;
@@ -19,7 +21,14 @@ const HeroWrap = styled.section`
 
     ${media.tablet`
         height: 420px;
+        background-image: url(${heroBGMed});
     `};
+
+    ${media.desktop`
+        height: 420px;
+        background-image: url(${heroBG});
+    `};
+
 `
 const HeroBigText = styled.span`
     color: ${color.grey.offWhite};

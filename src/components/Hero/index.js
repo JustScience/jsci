@@ -13,7 +13,7 @@ export default function Hero() {
             duration: 0.36, 
             autoAlpha: 0,
             scale: 0.9, 
-            delay: 0.15
+            delay: 0.1
         })
 
     }, [])

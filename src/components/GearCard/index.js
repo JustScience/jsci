@@ -1,18 +1,21 @@
 import React from 'react'
-import { GearCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory } from './style'
+import { GearCardWrap, GearThumbnailFrame, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory, GearDescription } from './style'
 
-export default function GearCard({ image, title, brand, category, href, children }) {
+export default function GearCard({ image, title, brand, category, description, href, children }) {
     return (
         <GearCardWrap href={href}>
-            <GearThumbnail src={image} />
+            <GearThumbnailFrame>
+                <GearThumbnail src={image} />
+            </GearThumbnailFrame>
             <GearInfo>
                 <div>
                     <GearTitle>{title}</GearTitle>
                     <GearBrand>{brand}</GearBrand>
+                    <GearDescription>{description}</GearDescription>
                 </div>
                 <GearCategory>
-                    <p>{category}</p>
                     {children}
+                    <p>{category}</p>
                 </GearCategory>
             </GearInfo>
         </GearCardWrap>

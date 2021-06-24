@@ -12,11 +12,11 @@ export default function JoinForm({tag, gift}) {
         >
             <FormField>
                 <label htmlFor="name">Name:</label>
-                <input name="name" id="name" />
+                <input name="name" id="name" required/>
             </FormField>
             <FormField>
                 <label htmlFor="email">Email:</label>
-                <input name="email" id="email" type="email" />
+                <input name="email" id="email" type="email" required/>
             </FormField>
             <input name="tag" id="tag" type="hidden" value={tag} />
             <FormField>

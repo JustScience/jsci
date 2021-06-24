@@ -17,9 +17,7 @@ export default function StreamKit({data}) {
                 title="Live Streaming Gear"
                 subtitle="Here's a list of my favorite livestream gear and accessories. Many links are affiliated, so using this page to shop for streaming gear helps to continue content production."
             />
-            <SectionTitle 
-                title="Livestream Hardware"
-            />
+            <SectionTitle title="Livestream Hardware" />
             <GearList>
                 {items.map(item => (
                     <GearCard 

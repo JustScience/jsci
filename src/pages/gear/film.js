@@ -17,9 +17,7 @@ export default function FilmKit({data}) {
                 title="YouTube Studio Gear"
                 subtitle="Here's a list of my favorite filmmaking gear and accessories. Many links are affiliated, so using this page to shop for video gear helps to continue content production."
             />
-            <SectionTitle 
-                title="Video Production Hardware"
-            />
+            <SectionTitle title="Video Production Hardware" />
             <GearList>
                 {items.map(item => (
                     <GearCard 

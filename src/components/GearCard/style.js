@@ -37,21 +37,18 @@ const GearCardWrap = styled.a.attrs( props => {
         background-color: rgba(255,255,255,0.3);
     }
 `
-const GearThumbnail = styled.img`
-    background-color: black;
+const GearThumbnailFrame = styled.div`
     height: 120px;
+    max-width: 200px;
+`
+const GearThumbnail = styled.img`
+    height: 100%;
 `
 const GearInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
-
-    p,h3 {
-        font-size: 0.75em;
-        font-weight: 300;
-        margin: 0;
-    }
 `
 const GearTitle = styled.h4`
     font-size: 1.2em;
@@ -61,9 +58,22 @@ const GearBrand = styled.h5`
     color: rgba(255,255,255,0.6);
     font-size: 0.9em;
     font-weight: 400;
+    margin-bottom: 12px;
 `
 const GearCategory = styled.h3`
+    color: rgba(255,180,0,0.48);
+    font-size: 0.75em;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 12px;
+`
+const GearDescription = styled.p`
     color: rgba(255,255,255,0.48);
+    font-size: 0.75em;
+    font-weight: 300;
+    height: 36px;
+    padding-left: 12px;
+    overflow: hidden;
 `
 
-export { GearList, GearCardWrap, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory }
+export { GearList, GearCardWrap, GearThumbnailFrame, GearThumbnail, GearInfo, GearTitle, GearBrand, GearCategory, GearDescription }

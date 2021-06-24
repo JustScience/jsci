@@ -11,7 +11,7 @@ module.exports = {
     copyright: "Copyright 2021, Galenti Consulting, LLC. All rights reserved.",
     author: "J Galenti",
     contact: "jscibeats@gmail.com",
-    siteUrl: "https://jsci.me", // No trailing slash allowed!
+    siteUrl: "https://jsci.io", // No trailing slash allowed!
     twitterUsername: "@jscibeats",
   },
   plugins: [
