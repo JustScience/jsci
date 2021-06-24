@@ -1,5 +1,7 @@
 import { graphql } from 'gatsby'
 import React, { useRef, useEffect } from 'react'
+
+import SearchEngine from "../../components/SEO/SearchEngine"
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
 import PageTitle from '../../components/PageTitle'
@@ -48,45 +50,48 @@ export default function MusicKit({data}) {
     }
      
     return (
-        <Layout>
-            <Hero />
-            <PageTitle 
-                title="Music Studio Gear"
-                subtitle="Here's a list of my favorite music recording gear and mixing plugins. Many links are affiliated, so using this page to shop for music gear helps to continue content production."
-            />
-            <SectionTitle title="Music Production Hardware" />
-            <GearList>
-                {hardware.map(item => (
-                    <GearCard 
-                        key={item.node.id}
-                        href={item.node.data.URL}
-                        title={item.node.data.Name}
-                        brand={item.node.data.Brand}
-                        category={item.node.data.Category}
-                        description={item.node.data.Description}
-                        image={item.node.data.Image[0].url}
-                        ref={addToRefs}>
-                    </GearCard>
-                ))}
-            </GearList>
-            <SectionTitle 
-                title="Music Production Software"
-            />
-            <GearList>
-                {software.map(item => (
-                    <GearCard 
-                        key={item.node.id}
-                        href={item.node.data.URL}
-                        title={item.node.data.Name}
-                        brand={item.node.data.Brand}
-                        category={item.node.data.Category}
-                        description={item.node.data.Description}
-                        image={item.node.data.Image[0].url}
-                        ref={addToRefs}>
-                    </GearCard>
-                ))}
-            </GearList>            
-        </Layout>
+        <>
+            <SearchEngine title="Best Music Studio Gear Wish Lists" />
+            <Layout>
+                <Hero />
+                <PageTitle 
+                    title="Music Studio Gear"
+                    subtitle="Here's a list of my favorite music recording gear and mixing plugins. Many links are affiliated, so using this page to shop for music gear helps to continue content production."
+                />
+                <SectionTitle title="Music Production Hardware" />
+                <GearList>
+                    {hardware.map(item => (
+                        <GearCard 
+                            key={item.node.id}
+                            href={item.node.data.URL}
+                            title={item.node.data.Name}
+                            brand={item.node.data.Brand}
+                            category={item.node.data.Category}
+                            description={item.node.data.Description}
+                            image={item.node.data.Image[0].url}
+                            ref={addToRefs}>
+                        </GearCard>
+                    ))}
+                </GearList>
+                <SectionTitle 
+                    title="Music Production Software"
+                />
+                <GearList>
+                    {software.map(item => (
+                        <GearCard 
+                            key={item.node.id}
+                            href={item.node.data.URL}
+                            title={item.node.data.Name}
+                            brand={item.node.data.Brand}
+                            category={item.node.data.Category}
+                            description={item.node.data.Description}
+                            image={item.node.data.Image[0].url}
+                            ref={addToRefs}>
+                        </GearCard>
+                    ))}
+                </GearList>            
+            </Layout>
+        </>
     )
 }
 

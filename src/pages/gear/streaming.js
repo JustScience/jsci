@@ -1,5 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+
+import SearchEngine from "../../components/SEO/SearchEngine"
 import Layout from '../../components/Layout'
 import Hero from '../../components/Hero'
 import PageTitle from '../../components/PageTitle'
@@ -11,26 +13,29 @@ export default function StreamKit({data}) {
     const items = data.allAirtable.edges
      
     return (
-        <Layout>
-            <Hero />
-            <PageTitle 
-                title="Live Streaming Gear"
-                subtitle="Here's a list of my favorite livestream gear and accessories. Many links are affiliated, so using this page to shop for streaming gear helps to continue content production."
-            />
-            <SectionTitle title="Livestream Hardware" />
-            <GearList>
-                {items.map(item => (
-                    <GearCard 
-                        key={item.node.id}
-                        href={item.node.data.URL}
-                        title={item.node.data.Name}
-                        brand={item.node.data.Brand}
-                        category={item.node.data.Category}
-                        image={item.node.data.Image[0].url}>
-                    </GearCard>
-                ))}
-            </GearList>
-        </Layout>
+        <>
+            <SearchEngine title="Best Live Streamer Gear Wish Lists" />
+            <Layout>
+                <Hero />
+                <PageTitle 
+                    title="Live Streaming Gear"
+                    subtitle="Here's a list of my favorite livestream gear and accessories. Many links are affiliated, so using this page to shop for streaming gear helps to continue content production."
+                />
+                <SectionTitle title="Livestream Hardware" />
+                <GearList>
+                    {items.map(item => (
+                        <GearCard 
+                            key={item.node.id}
+                            href={item.node.data.URL}
+                            title={item.node.data.Name}
+                            brand={item.node.data.Brand}
+                            category={item.node.data.Category}
+                            image={item.node.data.Image[0].url}>
+                        </GearCard>
+                    ))}
+                </GearList>
+            </Layout>
+        </>
     )
 }
 

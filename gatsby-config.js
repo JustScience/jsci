@@ -4,15 +4,15 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Melody Loops, VST Presets & DAW Templates",
+    title: "Melody Loops, VST Presets & DAW Templates | Music Production Tools & Training",
     titleTemplate: ' | JustScience',
-    description: "Melody Loops, VST Presets & DAW Templates",
-    keywords: "Melody Loop Samples",
+    description: "Melody Loops, VST Presets & DAW Templates. Music Production Tools & Training.",
+    keywords: "Melody Loop Samples Tutorials",
     copyright: "Copyright 2021, Galenti Consulting, LLC. All rights reserved.",
     author: "J Galenti",
     contact: "jscibeats@gmail.com",
     siteUrl: "https://jsci.io", // No trailing slash allowed!
-    twitterUsername: "@jscibeats",
+    twitter: "@jscibeats",
   },
   plugins: [
     "gatsby-plugin-styled-components",
