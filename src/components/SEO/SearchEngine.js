@@ -22,7 +22,7 @@ export default function SearchEngine({title, description, metaImage, url}) {
   )
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: 'en' }}>
       {/* General tags */}
       <title>{title || site.siteMetadata.title}</title>
       <meta name="description" content={description || site.siteMetadata.description} />
