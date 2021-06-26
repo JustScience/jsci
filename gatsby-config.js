@@ -64,6 +64,20 @@ module.exports = {
           default: require.resolve("./src/templates/default-page-layout.js"),
         },
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-embedder`,
+            options: {
+              customTransformers: [
+                // Your custom transformers
+              ],
+              services: {
+                // The service-specific options by the name of the service
+              },
+            },
+          },
+          // Other plugins here...
+        ],
       },
     },
     {

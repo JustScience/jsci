@@ -24,6 +24,8 @@ export default function SearchEngine({title, description, metaImage, url}) {
   return (
     <Helmet htmlAttributes={{ lang: 'en' }}>
       {/* General tags */}
+      <meta charSet="utf-8" />
+      <link rel="canonical" href="http://galenti.io" />
       <title>{title || site.siteMetadata.title}</title>
       <meta name="description" content={description || site.siteMetadata.description} />
       <meta name="image" content={metaImage || defaultMetaImage} />

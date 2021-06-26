@@ -6,5 +6,8 @@ const LayoutWrap = styled.main`
     padding: 0;
     width: 100%;
 `
+const HeaderSpacer = styled.div`
+    height: 54px;
+`
 
-export default LayoutWrap
+export { LayoutWrap, HeaderSpacer }
