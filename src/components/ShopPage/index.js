@@ -1,13 +1,13 @@
 import React from 'react'
 import ShopPageWrap from './style'
-import Contain from '../Contain'
+import Section from '../Section'
 
 export default function ShopPage({ children }) {
     return (
-        <Contain>
+        <Section>
             <ShopPageWrap>
                 { children }
             </ShopPageWrap>
-        </Contain>
+        </Section>
     )
 }

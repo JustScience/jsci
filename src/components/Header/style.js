@@ -59,7 +59,7 @@ const NavWrap = styled.nav`
     flex-direction: row;
     justify-content: flex-start;
 
-    ${media.tablet`
+    ${media.tabletLG`
         display: flex;
     `};
 `

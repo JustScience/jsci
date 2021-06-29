@@ -85,13 +85,13 @@ export default function ShopIndex() {
                 {!!filteredProducts.length &&
                     <div>
                         {!!searchTerm && !!filteredProducts.length && (
-                            <h3>
+                            <h4>
                                 Search Term: <strong>'{searchTerm}'</strong>
-                            </h3>
+                            </h4>
                         )}
-                        {!!filteredProducts.length &&
-                            <p>{filteredProducts.length} products</p>
-                        }
+                        {/* {!!filteredProducts.length &&
+                            <p>&nbsp;&nbsp;&nbsp;{filteredProducts.length} products</p>
+                        } */}
                         <ProductsGrid products={filteredProducts} />
                     </div>
                 }

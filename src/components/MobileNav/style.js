@@ -13,7 +13,7 @@ const MobileNavWrap = styled.nav`
     padding-top: 60px;
     width: 100%;
 
-    ${media.tablet`
+    ${media.tabletLG`
         display: none;
     `};
 `
@@ -26,7 +26,7 @@ const MobileNavTrigger = styled.div`
     width: 32px;
     z-index: 99999;
 
-    ${media.tablet`
+    ${media.tabletLG`
         display: none;
     `};
 

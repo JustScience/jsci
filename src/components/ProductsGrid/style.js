@@ -9,10 +9,19 @@ const ProductsGridWrap = styled.section`
     width: 100%;
 
     ${media.tablet`
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
     `};
-    ${media.laptopSM`
-        grid-template-columns: 3fr 3fr 3fr;
+    ${media.tabletLG`
+        grid-template-columns: 1fr 1fr 1fr;
+    `};
+    ${media.laptop`
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    `};
+    ${media.desktop`
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    `};
+    ${media.tv`
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     `};
 `
 

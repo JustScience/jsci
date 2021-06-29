@@ -9,7 +9,16 @@ const ShopPageWrap = styled.section`
         grid-template-columns: 1fr 2fr;
     `}
     ${media.tablet`
+        grid-template-columns: 1fr 3fr;
+    `}
+    ${media.tabletLG`
         grid-template-columns: 1fr 4fr;
+    `}
+    ${media.laptopSM`
+        grid-template-columns: 1fr 6fr;
+    `}
+    ${media.desktop`
+        grid-template-columns: 1fr 8fr;
     `}
 `
 

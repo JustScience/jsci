@@ -1,21 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductContext from '../../context/ProductContext'
 import CategoryFilterItem from '../FilterItem'
-import FiltersWrap from './style'
+import Icon from '../Icon'
+import { FiltersWrap, FilterMenuTrigger } from './style'
 
 export default function Filters() {
     const {collections} = React.useContext(ProductContext)
+    const [showFilters, setShowFilters] = useState(false)
 
     return (
         <FiltersWrap>
-            <h4>Categories</h4>
-            {collections.map(collection => (
-                <CategoryFilterItem 
-                    key={collection.storefrontId} 
-                    title={collection.title} 
-                    id={collection.storefrontId}
-                />
-            ))}
+            <FilterMenuTrigger
+                onClick={() => setShowFilters(!showFilters)}
+            >
+                <Icon shape="filter" size="24px" />
+                <h4>&nbsp;Categories</h4>
+            </FilterMenuTrigger>
+            {!!showFilters &&
+                <div>
+                    {collections.map(collection => (
+                        <CategoryFilterItem 
+                            key={collection.storefrontId} 
+                            title={collection.title} 
+                            id={collection.storefrontId}
+                        />
+                    ))}
+                </div>
+            }
         </FiltersWrap>
     )
 }

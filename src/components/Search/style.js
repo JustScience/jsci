@@ -5,7 +5,7 @@ const SearchWrap = styled.form`
     display: flex;
     margin-right: 60px;
 
-    ${media.tablet`
+    ${media.tabletLG`
         margin-right: 0;
     `};
 `
