@@ -13,11 +13,11 @@ export default function LinksGallery() {
                 </LinkCard>
                 <LinkCard to="/free/beats">
                     <Icon shape="microphone" color="white" size="48px" />
-                    <span>Free Instrumental Beats</span>
+                    <span>Free Hip Hop Beats</span>
                 </LinkCard>
                 <LinkCard to="/free/music">
                     <Icon shape="music" color="white" size="48px" />
-                    <span>Free Background Music</span>
+                    <span>Free Sync Music</span>
                 </LinkCard>
             </LinkGalleryWrap>
         </Contain>

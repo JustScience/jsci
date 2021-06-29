@@ -15,6 +15,7 @@ module.exports = {
     twitter: "@jscibeats",
   },
   plugins: [
+    "gatsby-optional-chaining",
     "gatsby-plugin-styled-components",
     // {
     //   resolve: `gatsby-plugin-facebook-pixel`,
@@ -83,10 +84,20 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `./src/pages/products/`,
+        path: `./src/pages/shop/`,
       },
     },
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        storeUrl: process.env.SHOPIFY_STORE_URL,
+        shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        shopifyConnections: ["collections"],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

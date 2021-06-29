@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import defaultMetaImage from '../../images/hero-bg-med.jpg'
 
-export default function SearchEngine({title, description, metaImage, url}) {
+export default function SearchEngine({ title, description, image, url, meta = [] }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,27 +21,68 @@ export default function SearchEngine({title, description, metaImage, url}) {
     `
   )
 
+  const metaDescription = description || site.siteMetadata.description
+  const metaImage = image || site.siteMetadata.defaultMetaImage
+
   return (
-    <Helmet htmlAttributes={{ lang: 'en' }}>
+    <Helmet 
+      htmlAttributes={{ 
+        lang: 'en' 
+      }}
+      title={title || site.siteMetadata.title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.twitter,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}    
+    >
       {/* General tags */}
       <meta charSet="utf-8" />
-      <link rel="canonical" href="http://galenti.io" />
-      <title>{title || site.siteMetadata.title}</title>
-      <meta name="description" content={description || site.siteMetadata.description} />
+      <link rel="canonical" href="http://jsci.io" />
+      {/* <meta name="description" content={description || site.siteMetadata.description} /> */}
       <meta name="image" content={metaImage || defaultMetaImage} />
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url || site.siteMetadata.siteUrl} />
-      <meta property="og:title" content={title || site.siteMetadata.title} />
-      <meta property="og:description" content={description || site.siteMetadata.description} />
+      {/* <meta property="og:description" content={description || site.siteMetadata.description} /> */}
       <meta property="og:image" content={metaImage || defaultMetaImage} />
       {/* <meta property="fb:app_id" content={seo.social.fbAppID} /> */}
 
       {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={site.siteMetadata.twitter} />
-      <meta name="twitter:title" content={title || site.siteMetadata.title} />
-      <meta name="twitter:description" content={description || site.siteMetadata.description} />
+      {/* <meta name="twitter:card" content="summary_large_image" /> */}
+      {/* <meta name="twitter:creator" content={site.siteMetadata.twitter} /> */}
+      {/* <meta name="twitter:title" content={title || site.siteMetadata.title} /> */}
+      {/* <meta name="twitter:description" content={description || site.siteMetadata.description} /> */}
       <meta name="twitter:image" content={metaImage || defaultMetaImage} />
 
       <script type="application/ld+json">

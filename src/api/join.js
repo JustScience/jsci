@@ -39,6 +39,9 @@ const handler = (req, res) => {
                 } else {
                     // res.json({ message: `Message Submitted` })
                     console.log('New Customer Added')
+
+                    // TODO: Send Confirmation/Welcome Email via SendGrid
+                    
                     res.redirect('/success')
                 }
             }

@@ -1,4 +1,5 @@
 import React from 'react'
+import Cart from '../Cart'
 import { NavWrap, NavItem } from './style.js'
 import color from './../Theme/Color'
 
@@ -13,7 +14,9 @@ export default function HeaderNav() {
             <NavItem to="/gear" activeStyle={activeStyle}>Gear</NavItem>
             <NavItem to="/links" activeStyle={activeStyle}>Links</NavItem>
             <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
+            <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem>
             {/* <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem> */}
+            <Cart />
         </NavWrap>
     )
 }
