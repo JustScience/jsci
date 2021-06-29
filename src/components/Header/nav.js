@@ -1,7 +1,8 @@
 import React from 'react'
-import Cart from '../Cart'
+import color from '../Theme/Color.js'
+
 import { NavWrap, NavItem } from './style.js'
-import color from './../Theme/Color'
+import Cart from '../Cart'
 
 const activeStyle = {
     background: "rgba(0,0,0,0.3)", 
@@ -10,13 +11,15 @@ const activeStyle = {
 
 export default function HeaderNav() {
     return (
-        <NavWrap>
-            <NavItem to="/gear" activeStyle={activeStyle}>Gear</NavItem>
-            <NavItem to="/links" activeStyle={activeStyle}>Links</NavItem>
-            <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
-            <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem>
-            {/* <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem> */}
-            <Cart />
-        </NavWrap>
+        <>
+            <NavWrap>
+                <NavItem to="/gear" activeStyle={activeStyle}>Gear</NavItem>
+                <NavItem to="/links" activeStyle={activeStyle}>Links</NavItem>
+                <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
+                <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem>
+                {/* <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem> */}
+                <Cart />
+            </NavWrap>
+        </>
     )
 }

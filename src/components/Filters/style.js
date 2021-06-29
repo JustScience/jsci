@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 const FiltersWrap = styled.section`
-    border: 1px solid #ccc;
     padding: 12px;
-    width: 180px;
+    width: 100%;
 `
 
 export default FiltersWrap

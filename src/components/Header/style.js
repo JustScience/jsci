@@ -18,7 +18,7 @@ const HeaderWrap = styled.nav`
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 9998;
 `
 const LogoWrap = styled.div`
     align-items: center;
@@ -55,9 +55,13 @@ const LogoText = styled.span`
 `
 const NavWrap = styled.nav`
     align-items: center;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: flex-start;
+
+    ${media.tablet`
+        display: flex;
+    `};
 `
 const NavItem = styled(GatsbyLink)`
     border: solid 1px transparent;

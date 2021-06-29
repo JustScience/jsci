@@ -1,7 +1,13 @@
 import styled from 'styled-components'
+import media from '../Responsive/media'
 
 const SearchWrap = styled.form`
     display: flex;
+    margin-right: 60px;
+
+    ${media.tablet`
+        margin-right: 0;
+    `};
 `
 const SearchButton = styled.button`
     align-items: center;

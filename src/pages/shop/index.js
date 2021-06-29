@@ -6,6 +6,7 @@ import ProductContext from '../../context/ProductContext'
 import Filters from '../../components/Filters'
 import Layout from '../../components/Layout'
 import { HeaderSpacer } from '../../components/Layout/style'
+import ShopPage from '../../components/ShopPage'
 import ProductsGrid from '../../components/ProductsGrid'
 
 export default function ShopIndex() {
@@ -57,15 +58,7 @@ export default function ShopIndex() {
     return (
         <Layout>
             <HeaderSpacer />
-            {!!searchTerm && !!filteredProducts.length && (
-                <h3>
-                    Search Term: <strong>'{searchTerm}'</strong>
-                </h3>
-            )}
-            {!!filteredProducts.length &&
-                <h4>{filteredProducts.length} products</h4>
-            }
-            <div>
+            <ShopPage>
                 <Filters />
                 {!filteredProducts.length &&
                     <div>
@@ -91,10 +84,18 @@ export default function ShopIndex() {
                 }
                 {!!filteredProducts.length &&
                     <div>
+                        {!!searchTerm && !!filteredProducts.length && (
+                            <h3>
+                                Search Term: <strong>'{searchTerm}'</strong>
+                            </h3>
+                        )}
+                        {!!filteredProducts.length &&
+                            <p>{filteredProducts.length} products</p>
+                        }
                         <ProductsGrid products={filteredProducts} />
                     </div>
                 }
-            </div>
+            </ShopPage>
         </Layout>
     )
 }
