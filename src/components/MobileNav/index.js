@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import color from '../Theme/Color.js'
 
-import { MobileNavItem, MobileNavWrap, MobileNavTrigger } from './style.js'
+import { MobileNavItem, MobileNavWrap, MobileNavTrigger, MobileNavHeaderWrap } from './style.js'
 import Icon from '../Icon'
 import Cart from '../Cart'
 
@@ -15,16 +15,19 @@ export default function MobileNav() {
 
     return (
         <div>
-            <MobileNavTrigger 
-                onClick={() => setShowMenu(!showMenu)}
-            >
-                {!showMenu &&
-                    <Icon shape="menu" size="32px" />
-                }
-                {!!showMenu &&
-                    <Icon shape="close" size="32px" />
-                }
-            </MobileNavTrigger>
+            <MobileNavHeaderWrap>
+                <Cart />
+                <MobileNavTrigger 
+                    onClick={() => setShowMenu(!showMenu)}
+                >
+                    {!showMenu &&
+                        <Icon shape="menu" size="32px" />
+                    }
+                    {!!showMenu &&
+                        <Icon shape="close" size="32px" />
+                    }
+                </MobileNavTrigger>
+            </MobileNavHeaderWrap>
             {!!showMenu && 
                 <MobileNavWrap>
                     <MobileNavItem to="/gear" activeStyle={activeStyle}>Gear</MobileNavItem>
@@ -32,7 +35,6 @@ export default function MobileNav() {
                     <MobileNavItem to="/free" activeStyle={activeStyle}>Freebies</MobileNavItem>
                     <MobileNavItem to="/shop" activeStyle={activeStyle}>Shop</MobileNavItem>
                     {/* <MobileNavItem to="/contact" activeStyle={activeStyle}>Contact</MobileNavItem> */}
-                    <Cart />
                 </MobileNavWrap>
             }
         </div>

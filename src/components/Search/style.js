@@ -3,7 +3,7 @@ import media from '../Responsive/media'
 
 const SearchWrap = styled.form`
     display: flex;
-    margin-right: 60px;
+    margin-right: 180px;
 
     ${media.tabletLG`
         margin-right: 0;

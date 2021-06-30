@@ -48,7 +48,7 @@ const LogoText = styled.span`
     font-size: 1em;
     visibility: hidden;
 
-    ${media.tabletSM`
+    ${media.tablet`
         display: block;
         visibility: visible;
     `};

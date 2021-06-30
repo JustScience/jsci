@@ -20,14 +20,20 @@ const MobileNavWrap = styled.nav`
         display: none;
     `};
 `
+const MobileNavHeaderWrap = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    right: 12px;
+    top: 8px;
+    z-index: 99999;
+`
 const MobileNavTrigger = styled.div`
     display: block;
     height: 32px;
-    position: fixed;
-    right: 12px;
-    top: 12px;
+    margin-left: 12px;
     width: 32px;
-    z-index: 99999;
 
     ${media.tabletLG`
         display: none;
@@ -54,4 +60,4 @@ const MobileNavItem = styled(GatsbyLink)`
     }
 `
 
-export { MobileNavWrap, MobileNavTrigger, MobileNavItem }
+export { MobileNavWrap, MobileNavHeaderWrap, MobileNavTrigger, MobileNavItem }

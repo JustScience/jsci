@@ -50,8 +50,8 @@ module.exports = {
       }
     },   
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
+    "gatsby-plugin-preact",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -138,6 +138,26 @@ module.exports = {
           }
         ]
       }
-    },    
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: [`/cart`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+      },
+    },
   ],
 };

@@ -12,9 +12,11 @@ export default function ProductTile({title, description, image, minPrice, handle
             <ProductTileWrap>
                 <GatsbyImage image={productImage} alt={title} />
                 <ProductTileInfo>
-                    <ProductTileTitle>{title}</ProductTileTitle>
-                    <ProductTileDescription>{description}</ProductTileDescription>
-                    <ProductTilePrice><span>from &nbsp;</span>${parseFloat(minPrice).toFixed(2)}</ProductTilePrice>
+                    <div>
+                        <ProductTileTitle>{title}</ProductTileTitle>
+                        <ProductTileDescription>{description}</ProductTileDescription>
+                        <ProductTilePrice>from &nbsp;<span>${parseFloat(minPrice).toFixed(2)}</span></ProductTilePrice>
+                    </div>
                 </ProductTileInfo>
             </ProductTileWrap>
         </Link>
