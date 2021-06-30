@@ -36,12 +36,22 @@ export default function SearchEngine({ title, description, image, url }) {
       {/* General tags */}
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <link rel="canonical" href="https://jsci.io" />
+      <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-300.woff2" crossorigin />
+      <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-regular.woff2" crossorigin />
+      <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-600.woff2" crossorigin />
+      {/* <link rel="preconnect" href="https://fonts.gstatic.com/" /> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300&display=swap" rel="stylesheet" /> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:400&display=swap" rel="stylesheet" /> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:700&display=swap" rel="stylesheet" /> */}
+
+      <link rel="canonical" href={site.siteMetadata.siteUrl} />
       <meta name="description" content={metaDescription} />
       <meta name="image" content={metaImage} />
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url || site.siteMetadata.siteUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
