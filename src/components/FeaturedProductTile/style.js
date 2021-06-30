@@ -25,18 +25,18 @@ const FeaturedProductTileInfo = styled.div`
         background-color: rgba(0,0,0,0.75);
         backdrop-filter: blur(5px);
 
-        h4{
+        h2 {
             color: rgba(255,255,255,0.6);
         }
     }
 `
-const FeaturedProductTileTitle = styled.h4`
+const FeaturedProductTileTitle = styled.h2`
     color: rgba(255,255,255,0);
     font-size: 0.75em;
     font-weight: 600;
     margin-top: 12px;
     text-align: center;
-    transition: color 240ms ease-in-out;
+    transition: color 360ms ease-in-out;
 `
 const FeaturedProductImage = styled(GatsbyImage)`
     position: relative;

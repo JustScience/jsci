@@ -28,8 +28,8 @@ export default function Search() {
                 placeholder="Search"
                 onChange={(e) => setSearchTerm(e.currentTarget.value)} 
             />
-            <SearchButton>
-                <Icon shape="search" size="20px" />
+            <SearchButton aria-label="Execute Search">
+                <Icon shape="search" size="20px" aria-hidden="true" />
             </SearchButton>
         </SearchWrap>
     )

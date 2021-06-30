@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Header'
 import MobileNav from '../MobileNav'
-import Footer from '../Footer'
+// import Footer from '../Footer'
 // import Responsive from '../Responsive'
 import { LayoutWrap } from './style'
 
@@ -14,7 +14,7 @@ export default function Layout({ children }) {
                 <Header />
                 <MobileNav />
                 { children }
-                <Footer />
+                {/* <Footer /> */}
             </LayoutWrap>
             {/* <Responsive />  */}
         </>

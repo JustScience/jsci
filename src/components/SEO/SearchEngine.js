@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import defaultMetaImage from '../../images/hero-bg-med.jpg'
 
-export default function SearchEngine({ title, description, image, url, meta = [] }) {
+export default function SearchEngine({ title, description, image, url }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,69 +21,38 @@ export default function SearchEngine({ title, description, image, url, meta = []
     `
   )
 
+  const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.defaultMetaImage
+  const metaImage = image || defaultMetaImage
 
   return (
     <Helmet 
       htmlAttributes={{ 
         lang: 'en' 
       }}
-      title={title || site.siteMetadata.title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.twitter,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}    
+      title={metaTitle}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}  
     >
       {/* General tags */}
       <meta charSet="utf-8" />
-      <link rel="canonical" href="http://jsci.io" />
-      {/* <meta name="description" content={description || site.siteMetadata.description} /> */}
-      <meta name="image" content={metaImage || defaultMetaImage} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <link rel="canonical" href="https://jsci.io" />
+      <meta name="description" content={metaDescription} />
+      <meta name="image" content={metaImage} />
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url || site.siteMetadata.siteUrl} />
-      {/* <meta property="og:description" content={description || site.siteMetadata.description} /> */}
-      <meta property="og:image" content={metaImage || defaultMetaImage} />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={metaImage} />
       {/* <meta property="fb:app_id" content={seo.social.fbAppID} /> */}
 
       {/* Twitter Card tags */}
-      {/* <meta name="twitter:card" content="summary_large_image" /> */}
-      {/* <meta name="twitter:creator" content={site.siteMetadata.twitter} /> */}
-      {/* <meta name="twitter:title" content={title || site.siteMetadata.title} /> */}
-      {/* <meta name="twitter:description" content={description || site.siteMetadata.description} /> */}
-      <meta name="twitter:image" content={metaImage || defaultMetaImage} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata.twitter} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={metaImage} />
 
       <script type="application/ld+json">
         {`
@@ -160,7 +129,6 @@ export default function SearchEngine({ title, description, image, url, meta = []
           }
         `}
       </script>
-    </Helmet>
-    
+    </Helmet> 
   )
 }

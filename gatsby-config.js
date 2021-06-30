@@ -92,9 +92,9 @@ module.exports = {
       resolve: "gatsby-source-shopify",
       options: {
         storeUrl: process.env.SHOPIFY_STORE_URL,
-        shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
+        // shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
         password: process.env.SHOPIFY_ADMIN_PASSWORD,
-        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        // accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
         shopifyConnections: ["collections"],
       },
     },
