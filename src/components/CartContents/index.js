@@ -2,8 +2,8 @@ import React from 'react'
 import {navigate} from 'gatsby'
 import { CartItem, CartFooter, CartNav, CartNavButton } from './style'
 import CartContext from '../../context/CartContext'
-import QuantityAdjuster from '../QuantityAdjuster'
-import RemoveLineItem from '../RemoveLineItem'
+import QuantityAdjuster from './QuantityAdjuster'
+import RemoveLineItem from './RemoveLineItem'
 
 export default function CartContents() {
     const {checkout, updateLineItem} = React.useContext(CartContext)

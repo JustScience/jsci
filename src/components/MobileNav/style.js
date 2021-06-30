@@ -5,13 +5,16 @@ import media from '../Responsive/media'
 
 const MobileNavWrap = styled.nav`
     align-items: flex-end;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.75);
     backdrop-filter: blur(5px);
     display: flex;
+    height: 100%;
     flex-direction: column;
-    padding: 24px;
-    padding-top: 60px;
+    padding: 12px 24px 48px 24px;
+    position: fixed;
+    top: 50px;
     width: 100%;
+    z-index: 99999;
 
     ${media.tabletLG`
         display: none;

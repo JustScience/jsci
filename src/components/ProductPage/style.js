@@ -48,11 +48,13 @@ const ProductPurchase = styled.div`
     }
 `
 const ProductPrice = styled.span`
-    font-size: 1.2em;
+    color: orange;
+    font-size: 1.5em;
+    font-weight: 600;
     margin-right: 24px;
 
     span {
-        color:rgba(255,255,255,0.6);
+        /* color:rgba(255,255,255,0.6); */
         font-weight:300;
         margin-right:2px;
     }

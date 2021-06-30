@@ -16,7 +16,7 @@ const HeroWrap = styled.section`
     height: 200px;
     justify-content: center;
     margin: 0;
-    margin-top: 48px;
+    margin-top: 50px;
     padding: 24px;
     width: 100%;
 

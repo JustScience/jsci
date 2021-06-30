@@ -1,6 +1,6 @@
 import React from 'react'
-import CartContext from '../context/CartContext'
-import Icon from './Icon'
+import CartContext from '../../context/CartContext'
+import Icon from '../Icon'
 import styled from 'styled-components'
 
 const DeleteButton = styled.div`

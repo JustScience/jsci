@@ -6,7 +6,7 @@ import { FiltersWrap, FilterMenuTrigger } from './style'
 
 export default function Filters() {
     const {collections} = React.useContext(ProductContext)
-    const [showFilters, setShowFilters] = useState(false)
+    const [showFilters, setShowFilters] = useState(true)
 
     return (
         <FiltersWrap>

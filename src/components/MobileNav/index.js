@@ -18,7 +18,12 @@ export default function MobileNav() {
             <MobileNavTrigger 
                 onClick={() => setShowMenu(!showMenu)}
             >
-                <Icon shape="menu" size="32px" />
+                {!showMenu &&
+                    <Icon shape="menu" size="32px" />
+                }
+                {!!showMenu &&
+                    <Icon shape="close" size="32px" />
+                }
             </MobileNavTrigger>
             {!!showMenu && 
                 <MobileNavWrap>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import CartContext from '../context/CartContext'
+import CartContext from '../../context/CartContext'
 
 const Input = styled.input`
     /* border: 2px solid red; */
@@ -11,7 +11,14 @@ const Button = styled.button`
     border-radius: 24px;
     color: white;
     cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     padding: 12px 24px;
+    transition: background-color 240ms ease-in-out;
+
+    &:hover {
+        background-color: slateblue;
+    }
 `
 
 export default function ProductQuantityAdder({variantId, available}) {

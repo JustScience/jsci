@@ -6,7 +6,7 @@ import queryString from 'query-string'
 
 import CartContext from '../context/CartContext'
 import SearchEngine from '../components/SEO/SearchEngine'
-import ProductQuantityAdder from '../components/ProductQuantityAdder'
+import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import ProductImageGallery from './product-image-gallery'
 import Layout from '../components/Layout'
 import Contain from '../components/Contain'

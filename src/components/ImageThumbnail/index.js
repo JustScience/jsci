@@ -1,14 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-const ImageThumbnailWrap = styled.div`
-    border: 1px solid ${props => props.isActive ? '#aaa' : '#eee'};
-    box-sizing: border-box;
-    padding: 2px;
-    height: 90px;
-    width: 90px;
-`
+import ImageThumbnailWrap from './style'
 
 export default function ImageThumbnail({isActive, onClick, image}) {
     const thumbnail = getImage(image)
