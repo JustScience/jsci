@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import color from '../Theme/Color'
 import media from '../Responsive/media'
 
-const HeaderWrap = styled.nav`
+const HeaderWrap = styled.div`
     align-items: center;
     background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(12px);
     box-shadow: 0 4px 9px -6px ${color.shadow.base};
     display: flex;
     flex-direction: row;
+    height: 50px;
     justify-content: space-between;
     margin: 0;
     padding: 4px 12px;
@@ -26,18 +27,15 @@ const LogoWrap = styled.div`
     flex-direction: row;
     justify-content: flex-start;
 `
-const LogoIcon = styled.span`
-    /* border: solid 2px #222;
-    border-radius: 50%; */
+const LogoIcon = styled.div`
     color: ${color.grey.offWhite};
     font-size: 2.1em;
     font-weight: 700;
-    /* height: 24px; */
     margin-right: 10px;
     text-shadow: 0 1px 3px ${color.shadow.light};
     transition: 333ms ease-in;
-    /* width: 24px; */
 
+    img {height:100%;width:100%;}
     /* &:hover {
         color: ${color.accent.base};
     } */
@@ -46,6 +44,7 @@ const LogoText = styled.span`
     color: ${color.grey.offWhite};
     display: none;
     font-size: 1em;
+    line-height: 100%;
     visibility: hidden;
 
     ${media.tablet`

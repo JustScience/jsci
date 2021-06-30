@@ -14,12 +14,12 @@ const SearchButton = styled.button`
     background-color: rgba(255,255,255,0);
     border: 1px solid rgba(255,255,255,0.15);
     display: flex;
-    height: 28px;
+    height: 30px;
     justify-content: center;
     outline: none;
     padding: 4px;
     transition: all 240ms ease-in-out;
-    width: 28px;
+    width: 30px;
 
     &:hover {
         background-color: rgba(0,0,0,1);

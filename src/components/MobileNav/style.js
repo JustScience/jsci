@@ -26,7 +26,7 @@ const MobileNavHeaderWrap = styled.div`
     flex-direction: row;
     position: fixed;
     right: 12px;
-    top: 8px;
+    top: 5px;
     z-index: 99999;
 `
 const MobileNavTrigger = styled.div`

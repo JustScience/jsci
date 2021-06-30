@@ -1,13 +1,12 @@
-
 * {
     box-sizing: border-box;
     background-repeat: none;
+    font-family: 'Coming Soon', 'Open Sans', sans-serif;
 }
 
 html,body {
     background-color: black; 
     color: white;
-    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
