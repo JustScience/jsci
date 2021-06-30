@@ -2,24 +2,13 @@ import styled from 'styled-components'
 import media from '../Responsive/media'
 
 const ShopPageWrap = styled.section`
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     ${media.tabletSM`
-        grid-template-columns: 1fr 2fr;
-    `}
-    ${media.tablet`
-        grid-template-columns: 1fr 3fr;
-    `}
-    ${media.tabletLG`
-        grid-template-columns: 1fr 4fr;
-    `}
-    ${media.laptopSM`
-        grid-template-columns: 1fr 6fr;
-    `}
-    ${media.desktop`
-        grid-template-columns: 1fr 8fr;
-    `}
+        flex-direction: row;
+    `};
 `
 
 export default ShopPageWrap

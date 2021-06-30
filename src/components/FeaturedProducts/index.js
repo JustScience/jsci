@@ -1,6 +1,6 @@
 import React from 'react'
-import ProductContext from '../context/ProductContext'
-import ProductsGrid from './ProductsGrid'
+import ProductContext from '../../context/ProductContext'
+import FeaturedProductsGrid from '../FeaturedProductsGrid'
 
 export default function FeaturedProducts() {
     const {collections} = React.useContext(ProductContext)
@@ -9,8 +9,8 @@ export default function FeaturedProducts() {
 
     return (
         <section>
-            <h1>Featured Products</h1>
-            <ProductsGrid products={featuredCollection.products} />
+            <h1>Latest Sample Packs</h1>
+            <FeaturedProductsGrid products={featuredCollection.products} />
         </section>
     )
 }

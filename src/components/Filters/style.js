@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const FiltersWrap = styled.section`
     padding: 0;
-    width: 100%;
 `
 const FilterMenuTrigger = styled.div`
     align-items: center;
@@ -11,6 +10,7 @@ const FilterMenuTrigger = styled.div`
     flex-direction: row;
     margin-bottom: 12px;
     justify-content: flex-start;
+    width: 180px;
 
     h4  {margin: 0;}
 `

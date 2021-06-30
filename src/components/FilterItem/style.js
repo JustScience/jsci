@@ -7,6 +7,7 @@ const FilterItemWrap = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     margin-bottom: 4px;
+    width: 100%;
 `
 
 export default FilterItemWrap

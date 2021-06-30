@@ -13,17 +13,20 @@ const HeroWrap = styled.section`
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 200px;
     justify-content: center;
     margin: 0;
+    margin-top: 48px;
     padding: 24px;
     width: 100%;
 
     ${media.tablet`
-        height: 420px;
+        height: 270px;
         background-image: url(${heroBGMed});
     `};
-
+    ${media.tabletLG`
+        height: 360px;
+    `};
     ${media.desktop`
         height: 420px;
         background-image: url(${heroBG});

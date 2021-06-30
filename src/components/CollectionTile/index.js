@@ -1,10 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Button from './Button'
-
-const CollectionTileWrap = styled.div`
-`
+import Button from '../Button'
+import CollectionTileWrap from './style'
 
 export default function CollectionTile({title, description, image, destination}) {
     const collectionImage = getImage(image)
