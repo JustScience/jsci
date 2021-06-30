@@ -39,10 +39,10 @@ export default function SearchEngine({ title, description, image, url }) {
       <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-300.woff2" crossorigin />
       <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-regular.woff2" crossorigin />
       <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-600.woff2" crossorigin />
-      {/* <link rel="preconnect" href="https://fonts.gstatic.com/" /> */}
-      {/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300&display=swap" rel="stylesheet" /> */}
-      {/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:400&display=swap" rel="stylesheet" /> */}
-      {/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans:700&display=swap" rel="stylesheet" /> */}
+      <link rel="preconnect" href="https://fonts.gstatic.com/" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:400&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:700&display=swap" rel="stylesheet" />
 
       <link rel="canonical" href={site.siteMetadata.siteUrl} />
       <meta name="description" content={metaDescription} />

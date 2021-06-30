@@ -1,14 +1,16 @@
 import * as React from "react"
-import Layout from './../components/Layout'
-import Hero from './../components/Hero'
-import Section from './../components/Section'
-import FormCTA from './../components/FormCTA'
-import Form from './../components/Form'
-import { FormField } from './../components/Form/style'
+import SearchEngine from '../components/SEO/SearchEngine'
+import Layout from '../components/Layout'
+import Hero from '../components/Hero'
+import Section from '../components/Section'
+import FormCTA from '../components/FormCTA'
+import Form from '../components/Form'
+import { FormField } from '../components/Form/style'
 
 export default function SendGridUI() {
   return (
     <>
+      <SearchEngine title="Contact JSci" />
       <Layout>
         <Hero />
         <Section>

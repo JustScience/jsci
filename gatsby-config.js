@@ -140,23 +140,10 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: "gatsby-plugin-advanced-sitemap",
       options: {
-        excludes: [`/cart`],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-          }
-        `,
+        createLinkInHead: true,
+        exclude: [`/cart`],
       },
     },
   ],
