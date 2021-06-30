@@ -6,17 +6,17 @@ import { gsap } from "gsap";
 export default function Hero() {
     const heroRef = useRef(null)
 
-    useEffect(() => {
-        // console.log(heroRef.current)
+    // useEffect(() => {
+    //     // console.log(heroRef.current)
 
-        gsap.from(heroRef.current,{
-            duration: 0.36, 
-            autoAlpha: 0,
-            scale: 0.9, 
-            delay: 0.1
-        })
+    //     gsap.from(heroRef.current,{
+    //         duration: 0.36, 
+    //         autoAlpha: 0,
+    //         scale: 0.9, 
+    //         delay: 0.1
+    //     })
 
-    }, [])
+    // }, [])
 
     return (
         <HeroWrap ref={heroRef}>
