@@ -146,6 +146,15 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-youtube-v3`,
+      options: {
+        channelId: [process.env.YOUTUBE_CHANNEL_ID],
+        playlistId: `PLNEgccO0Ubs7_TgFJbRAf9tdzKdpzp9Wn`,
+        apiKey: process.env.YOUTUBE_API_KEY, // Optional for public requests
+        maxVideos: 100 // Defaults to 50
+      },
+    },    
+    {
       resolve: "gatsby-plugin-advanced-sitemap",
       options: {
         createLinkInHead: true,

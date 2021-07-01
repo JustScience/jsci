@@ -14,6 +14,7 @@ export default function HeaderNav() {
         <>
             <NavWrap>
                 <NavItem to="/gear" activeStyle={activeStyle}>Gear</NavItem>
+                <NavItem to="/video" activeStyle={activeStyle}>Videos</NavItem>
                 <NavItem to="/links" activeStyle={activeStyle}>Links</NavItem>
                 <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
                 <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem>
