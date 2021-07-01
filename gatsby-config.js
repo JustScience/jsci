@@ -23,12 +23,12 @@ module.exports = {
     //     pixelId: process.env.FACEBOOK_PIXEL_ID,
     //   },
     // },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: process.env.GA_TRACKING_ID,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: process.env.GA_TRACKING_ID,
+    //   },
+    // },
     `gatsby-plugin-gatsby-cloud`,
     "gatsby-plugin-image",
     {
@@ -38,7 +38,7 @@ module.exports = {
           formats: [`auto`, `webp`],
           placeholder: `dominantColor`,
           quality: 50,
-          breakpoints: [750, 1080, 1366, 1920],
+          breakpoints: [360, 750, 1080, 1366, 1920],
           backgroundColor: `transparent`,
           tracedSVGOptions: {},
           blurredOptions: {},
@@ -53,11 +53,17 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-plugin-preact",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: "src/images/icon.png",
+        name: `JustScience Shop`,
+        short_name: `JSci Beats`,
+        start_url: `/`,
+        background_color: `#000000`,
+        theme_color: `darkslateblue`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
       },
-    },
+    },    
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

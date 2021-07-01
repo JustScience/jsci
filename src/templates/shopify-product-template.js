@@ -25,7 +25,7 @@ export const query = graphql`
             images {
                 id
                 src
-                gatsbyImageData(height: 540, width: 540)
+                gatsbyImageData(height: 360, width: 360)
             }
             priceRangeV2 {
                 minVariantPrice {

@@ -36,12 +36,8 @@ export default function SearchEngine({ title, description, image, url }) {
       {/* General tags */}
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-300.woff2" crossorigin />
-      <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-regular.woff2" crossorigin />
-      <link rel="preload" as="font" type="font/woff2" href="./fonts/open-sans-v20-latin-600.woff2" crossorigin />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
 
       <link rel="canonical" href={site.siteMetadata.siteUrl} />
       <meta name="description" content={metaDescription} />

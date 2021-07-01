@@ -18,7 +18,7 @@ const query = graphql`
     description
     images {
         id
-        gatsbyImageData(width: 540, height: 540)
+        gatsbyImageData(width: 240, height: 240)
     }
     priceRangeV2 {
         minVariantPrice {
@@ -47,7 +47,7 @@ const query = graphql`
           storefrontId
           shopifyId
           image {
-            gatsbyImageData(width: 540, height: 540)
+            gatsbyImageData(width: 240, height: 240)
           }
         }
       }
