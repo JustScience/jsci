@@ -2,9 +2,12 @@ import styled from 'styled-components'
 import media from '../Responsive/media'
 
 const SearchWrap = styled.form`
-    display: flex;
-    margin-right: 180px;
-
+    display: none;
+    
+    ${media.tabletSM`
+        display: flex;
+        margin-right: 180px;
+    `};
     ${media.tabletLG`
         margin-right: 0;
     `};

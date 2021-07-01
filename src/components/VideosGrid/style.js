@@ -8,7 +8,7 @@ const VideosGridWrap = styled.ul`
     justify-items: stretch;
     width: 100%;
 
-    ${media.phone`
+    ${media.tabletSM`
         grid-template-columns: 1fr 1fr;
     `};
     ${media.tablet`
