@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import SearchEngine from "../../components/SEO/SearchEngine"
 import Layout from '../../components/Layout'
 import Section from '../../components/Section'
+import PageTitle from '../../components/PageTitle'
 import Hero from '../../components/Hero'
 import VideosGrid from '../../components/VideosGrid'
 
@@ -16,7 +17,10 @@ export default function YouTubePage({data}) {
             <Layout>
                 <Hero />
                 <Section>
-                    <h1>YouTube Videos</h1>
+                    <PageTitle 
+                        title="Latest YouTube Videos"
+                        subtitle="Watching my latest videos is just better here!"
+                    />
                     <VideosGrid videos={videos} />
                 </Section>
             </Layout>
