@@ -9,7 +9,7 @@ import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export default function FilmKit({data}) {
+export default function FilmGear({data}) {
     const items = data.allAirtable.edges
      
     return (
@@ -40,9 +40,9 @@ export default function FilmKit({data}) {
 }
 
 export const query = graphql`
-    query FilmKitList {
+    query FilmGearList {
         allAirtable(
-            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Film"}}}
+            filter: {table: {eq: "Gear"}, data: {Task: {eq: "Film"}}}
             sort: {order: ASC, fields: data___Category}
         ) {
             edges {

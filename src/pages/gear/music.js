@@ -9,7 +9,7 @@ import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export default function MusicKit({data}) {
+export default function MusicGear({data}) {
     const hardware = data.hardware.edges
     const software = data.software.edges
      
@@ -59,9 +59,9 @@ export default function MusicKit({data}) {
 
 
 export const query = graphql`
-    query MusicKitList {
+    query MusicGearList {
         hardware: allAirtable(
-            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Music"}, Type: {eq: "Hardware"}}}
+            filter: {table: {eq: "Gear"}, data: {Task: {eq: "Music"}, Type: {eq: "Hardware"}}}
             sort: {order: ASC, fields: data___Category}
         ) {
             edges {
@@ -83,7 +83,7 @@ export const query = graphql`
             }
         },
         software: allAirtable(
-            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Music"}, Type: {eq: "Software"}}}
+            filter: {table: {eq: "Gear"}, data: {Task: {eq: "Music"}, Type: {eq: "Software"}}}
             sort: {order: ASC, fields: data___Category}
         ) {
             edges {

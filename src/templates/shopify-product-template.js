@@ -14,6 +14,8 @@ import { HeaderSpacer } from '../components/Layout/style'
 import ProductPage from '../components/ProductPage'
 import { ProductInfo, ProductPrice, ProductPurchase } from '../components/ProductPage/style'
 
+// import ShopifyAudioPreview from '../components/ShopifyAudioPreview'
+
 export const query = graphql`
     query ProductQuery($shopifyId: String) {
         product: shopifyProduct(shopifyId: {eq: $shopifyId}) {
@@ -33,11 +35,19 @@ export const query = graphql`
                 }
             }
         }
+        productInfo: airtable(
+            table: {eq: "Shop"}, data: {ShopifyProductID: {eq: $shopifyId}}
+        ) {
+            data {
+                Genre
+            }
+        }
     }
 `;
 
 export default function ShopifyProduct({data}) {
     const { title, description, storefrontId } = data.product
+    const { Genre } = data.productInfo.data
     const images = data.product.images
 
     const {getProductById} = React.useContext(CartContext)
@@ -80,6 +90,7 @@ export default function ShopifyProduct({data}) {
                         <ProductInfo>
                             {/* <button onClick={() => navigate(-1)}>BACK</button> */}
                             <h1>{title}</h1>
+                            <p>{Genre}</p>
                             <p>{description}</p>
                             {/* <p>{storefrontId}</p> */}
                             {/* <p>{shopifyId}</p> */}
@@ -114,6 +125,8 @@ export default function ShopifyProduct({data}) {
                         </ProductInfo>
                     </ProductPage>
                 </Contain>
+                {/* TODO */}
+                {/* <ShopifyAudioPreview /> */}
             </Layout>
         </>
     )

@@ -136,7 +136,11 @@ module.exports = {
         tables: [
           {
             baseId: process.env.AIRTABLE_DB,
-            tableName: `Kit`,
+            tableName: `Gear`,
+          },
+          {
+            baseId: process.env.AIRTABLE_DB,
+            tableName: `Shop`,
           },
           {
             baseId: process.env.AIRTABLE_DB,

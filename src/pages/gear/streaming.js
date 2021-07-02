@@ -9,7 +9,7 @@ import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export default function StreamKit({data}) {
+export default function StreamGear({data}) {
     const items = data.allAirtable.edges
      
     return (
@@ -40,9 +40,9 @@ export default function StreamKit({data}) {
 }
 
 export const query = graphql`
-    query StreamKitList {
+    query StreamGearList {
         allAirtable(
-            filter: {table: {eq: "Kit"}, data: {Task: {eq: "Streaming"}}}
+            filter: {table: {eq: "Gear"}, data: {Task: {eq: "Streaming"}}}
             sort: {order: ASC, fields: data___Category}
         ) {
             edges {
