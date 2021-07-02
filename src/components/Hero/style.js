@@ -1,36 +1,31 @@
 import styled from 'styled-components'
 import color from './../Theme/Color'
 import media from './../Responsive/media'
-import heroBGSmall from './../../images/hero-bg-sml.jpg'
-import heroBGMed from './../../images/hero-bg-med.jpg'
-import heroBG from './../../images/hero-bg.jpg'
 
 const HeroWrap = styled.section`
-    align-items: center;
-    background-image: url(${heroBGSmall});
-    background-repeat: none;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-area: 1/1;
     height: 200px;
-    justify-content: center;
     margin: 0;
     margin-top: 50px;
-    padding: 24px;
     width: 100%;
 
     ${media.tablet`
         height: 270px;
-        background-image: url(${heroBGMed});
     `};
     ${media.tabletLG`
         height: 360px;
     `};
     ${media.desktop`
         height: 420px;
-        background-image: url(${heroBG});
     `};
+
+`
+const HeroContent = styled.div`
+    display: grid;
+    grid-area: 1/1;
+    place-items: center; // This centers the other elements inside the hero component
+    position: relative;
 
 `
 const HeroBigText = styled.span`
@@ -59,4 +54,4 @@ const HeroCopyText = styled.p`
     text-align: center;
 `
 
-export { HeroWrap, HeroBigText, HeroHeading, HeroCopyText }
+export { HeroWrap, HeroContent, HeroBigText, HeroHeading, HeroCopyText }

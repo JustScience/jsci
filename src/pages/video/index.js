@@ -13,13 +13,17 @@ export default function YouTubePage({data}) {
 
     return (
         <>
-            <SearchEngine title="YouTube Videos by JustScience" />
+            <SearchEngine 
+                title="YouTube Videos by JustScience" 
+                description="Learn Music Production and Marketing with tutorials and demo videos by JustScience"
+            />
             <Layout>
                 <Hero />
                 <Section>
                     <PageTitle 
                         title="Latest YouTube Videos"
                         subtitle="Watching my latest videos is just better here!"
+                        image=""
                     />
                     <VideosGrid videos={videos} />
                 </Section>

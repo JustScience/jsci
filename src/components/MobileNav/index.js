@@ -30,11 +30,12 @@ export default function MobileNav() {
             </MobileNavHeaderWrap>
             {!!showMenu && 
                 <MobileNavWrap>
-                    <MobileNavItem to="/gear" activeStyle={activeStyle}>Gear</MobileNavItem>
-                    <MobileNavItem to="/links" activeStyle={activeStyle}>Links</MobileNavItem>
-                    <MobileNavItem to="/free" activeStyle={activeStyle}>Freebies</MobileNavItem>
                     <MobileNavItem to="/shop" activeStyle={activeStyle}>Shop</MobileNavItem>
-                    {/* <MobileNavItem to="/contact" activeStyle={activeStyle}>Contact</MobileNavItem> */}
+                    <MobileNavItem to="/gear" activeStyle={activeStyle}>Gear</MobileNavItem>
+                    <MobileNavItem to="/free" activeStyle={activeStyle}>Freebies</MobileNavItem>
+                    <MobileNavItem to="/video" activeStyle={activeStyle}>Videos</MobileNavItem>
+                    <MobileNavItem to="/links" activeStyle={activeStyle}>Links</MobileNavItem>
+                    <MobileNavItem to="/contact" activeStyle={activeStyle}>Contact</MobileNavItem>
                 </MobileNavWrap>
             }
         </div>
