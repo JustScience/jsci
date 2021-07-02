@@ -4,22 +4,28 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ImageThumbnail from '../components/ImageThumbnail'
 
 const ProductImageGalleryWrap = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 24px;
-    height: 100%;
     width: 100%;
 `
 const ThumbnailGalleryWrap = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    justify-items: stretch;
     width: 100%;
 `
 const ProductImage = styled.div`
+    display: flex;
+    justify-content: stretch;
+    height: 100%;
     width: 100%;
 `
 const MainImage = styled(GatsbyImage)`
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
 `
 
 export default function ProductImageGallery({selectedVariantImageId, images}) {

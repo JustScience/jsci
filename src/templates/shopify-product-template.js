@@ -3,6 +3,7 @@ import React from 'react'
 import { graphql, navigate } from 'gatsby'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
+import AudioPreview from '../components/AudioPreview';
 
 import CartContext from '../context/CartContext'
 import SearchEngine from '../components/SEO/SearchEngine'
@@ -12,9 +13,18 @@ import Layout from '../components/Layout'
 import Contain from '../components/Contain'
 import { HeaderSpacer } from '../components/Layout/style'
 import ProductPage from '../components/ProductPage'
-import { ProductInfo, ProductPrice, ProductPurchase } from '../components/ProductPage/style'
+import { 
+    ProductInfo, 
+    ProductTitle, 
+    ProductSubTitle,
+    ProductDescription, 
+    ProductStats, 
+    ProductStat, 
+    ProductPrice, 
+    ProductPurchaseWrap,
+    ProductPurchase } from '../components/ProductPage/style'
 
-// import ShopifyAudioPreview from '../components/ShopifyAudioPreview'
+import 'react-h5-audio-player/lib/styles.css'
 
 export const query = graphql`
     query ProductQuery($shopifyId: String) {
@@ -39,7 +49,14 @@ export const query = graphql`
             table: {eq: "Shop"}, data: {ShopifyProductID: {eq: $shopifyId}}
         ) {
             data {
+                Tagline
                 Genre
+                SubGenre
+                Mood
+                ProductType
+                Preview {
+                    url
+                }
             }
         }
     }
@@ -47,8 +64,11 @@ export const query = graphql`
 
 export default function ShopifyProduct({data}) {
     const { title, description, storefrontId } = data.product
-    const { Genre } = data.productInfo.data
+    const { Tagline, Genre, SubGenre, Mood, Preview, ProductType } = data.productInfo.data
+    const Audio = Preview[0].url
     const images = data.product.images
+
+    console.log(Preview)
 
     const {getProductById} = React.useContext(CartContext)
     const [product, setProduct] = React.useState(null)
@@ -89,14 +109,28 @@ export default function ShopifyProduct({data}) {
                         />
                         <ProductInfo>
                             {/* <button onClick={() => navigate(-1)}>BACK</button> */}
-                            <h1>{title}</h1>
-                            <p>{Genre}</p>
-                            <p>{description}</p>
+                            <ProductTitle>{title}</ProductTitle>
+                            <ProductSubTitle>{Tagline}</ProductSubTitle>
+                            <ProductStats>
+                                <ProductStat>{Mood}</ProductStat>
+                                <ProductStat>{SubGenre}</ProductStat>
+                                <ProductStat>{Genre}</ProductStat>
+                                <ProductStat>{ProductType}</ProductStat>
+                            </ProductStats>
+                            <ProductDescription>{description}</ProductDescription>
                             {/* <p>{storefrontId}</p> */}
                             {/* <p>{shopifyId}</p> */}
-                            <ProductPurchase>
+                            <ProductPurchaseWrap>
+                                <AudioPreview 
+                                    autoPlay={false}
+                                    src={Audio}
+                                    layout='horizontal-reverse'
+                                    // onPlay={e => console.log("onPlay")}
+                                    customAdditionalControls={[]}
+                                    // other props here
+                                />
                                 {product?.availableForSale && !!selectedVariant && (
-                                    <>
+                                    <ProductPurchase>
                                         {product?.variants.length > 1 &&
                                             <select value={selectedVariant.id} onChange={handleVariantChange}>
                                                 File Types: 
@@ -119,9 +153,9 @@ export default function ShopifyProduct({data}) {
                                                 />
                                             </>
                                         }
-                                    </>
+                                    </ProductPurchase>
                                 )}
-                                </ProductPurchase>
+                            </ProductPurchaseWrap>
                         </ProductInfo>
                     </ProductPage>
                 </Contain>

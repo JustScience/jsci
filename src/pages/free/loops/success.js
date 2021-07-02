@@ -1,5 +1,4 @@
 import React from 'react'
-import './../../../styles/global.css'
 
 import Layout from './../../../components/Layout'
 import Hero from './../../../components/Hero'

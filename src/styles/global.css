@@ -16,27 +16,3 @@ html,body {
 a:any-link {color:inherit;text-decoration:none;}
 ul {list-style:none;padding:0;}
 h1,h2,h3,h4,h5,h6,p {margin-top:0;}
-
-
-.rhap_container,
-.rhap_main {
-    background: transparent;
-    border: none;
-    color: white;
-    outline: none;
-}
-.rhap_current-time {
-    color: #ccc;
-    margin-right: 4px;
-}
-.rhap_total-time {
-    color: #ccc;
-}
-.rhap_additional-controls {
-    flex: 0;
-}
-.rhap_volume-controls {
-    display: block;
-    margin-right: 12px;
-}
-.rhap_additional-controls {display: none;}
