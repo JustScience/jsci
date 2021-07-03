@@ -11,7 +11,7 @@ export default function GearCard({ image, title, brand, category, description, t
                 <div>
                     <GearTitle>{title}</GearTitle>
                     <GearBrand>{brand}</GearBrand>
-                    <GearDescription>{description}</GearDescription>
+                    {/* <GearDescription>{description}</GearDescription> */}
                 </div>
                 <GearCategory>
                     {children}
