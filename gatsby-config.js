@@ -2,6 +2,16 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const {
+  NODE_ENV,
+  URL: CLOUD_SITE_URL = 'https://jsci.io',
+  DEPLOY_PRIME_URL: CLOUD_DEPLOY_URL = CLOUD_SITE_URL,
+  CONTEXT: CLOUD_ENV = NODE_ENV
+} = process.env;
+
+const isCloudProduction = CLOUD_ENV === 'production';
+const siteUrl = isCloudProduction ? CLOUD_SITE_URL : CLOUD_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: "Melody Loops, VST Presets & DAW Templates | Music Production Tools & Training",
@@ -50,6 +60,28 @@ module.exports = {
       }
     },   
     "gatsby-plugin-react-helmet",
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => CLOUD_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+            sitemap: 'https://jsci.io/sitemap.xml',
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
     "gatsby-plugin-offline",
     "gatsby-plugin-preact",
     {
