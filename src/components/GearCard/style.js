@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from '../Responsive/media'
+import { Link as GatsbyLink } from 'gatsby'
 
 const GearList = styled.ul`
     display: grid;
@@ -16,13 +17,14 @@ const GearList = styled.ul`
         grid-template-columns: 3fr 3fr 3fr;
     `};
 `
-const GearCardWrap = styled.a.attrs( props => {
-    return {
-        href: props.href ? props.href : '#',
-        rel: 'noopener noreferrer',
-        target: '_blank'
-    }
-})`
+// const GearCardWrap = styled.a.attrs( props => {
+//     return {
+//         href: props.href ? props.href : '#',
+//         rel: 'noopener noreferrer',
+//         target: '_blank'
+//     }
+// })`
+const GearCardWrap = styled(GatsbyLink)`
     background-color: rgba(255,255,255,0.15);
     border-radius: 4px;
     display: flex;

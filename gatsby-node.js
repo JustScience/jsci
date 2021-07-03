@@ -11,11 +11,29 @@ exports.createPages = async ({graphql, actions}) => {
                     }
                 }
             }
-            allYoutubeVideo(filter: {channelId: {eq: "UCecJMZiU33IQMawV4kqujxA"}}) {
+            allYoutubeVideo(
+                filter: {channelId: {eq: "UCecJMZiU33IQMawV4kqujxA"}}
+            ) {
                 edges {
                     node {
                         id
                         videoId
+                    }
+                }
+            }
+            allAirtable(
+                filter: {table: {eq: "Gear"}}
+                sort: {order: ASC, fields: data___Category}
+            ) {
+                edges {
+                    node {
+                        data {
+                            Name
+                            Brand
+                            Task
+                            Type
+                        }
+                        id
                     }
                 }
             }
@@ -34,6 +52,14 @@ exports.createPages = async ({graphql, actions}) => {
         actions.createPage({
             path: '/video/' + node.videoId,
             component: path.resolve('src/templates/youtube-video-template.js'),
+            context: {id: node.id,}
+        })
+    })
+
+    data.allAirtable.edges.forEach(({node}) => {
+        actions.createPage({
+            path: `/gear/${encodeURIComponent(node.data.Task.replace(/\s+/g, '-').toLowerCase())}/${encodeURIComponent(node.data.Type.replace(/\s+/g, '-').toLowerCase())}/${encodeURIComponent(node.data.Name.replace(/\s+/g, '-').toLowerCase())}-${encodeURIComponent(node.data.Brand.replace(/\s+/g, '-').toLowerCase())}`,
+            component: path.resolve('src/templates/affiliate-page-template.js'),
             context: {id: node.id,}
         })
     })

@@ -45,7 +45,7 @@ query MyQuery {
                 videoId
                 localThumbnail {
                     childImageSharp {
-                        gatsbyImageData(width:180)
+                        gatsbyImageData(width:120)
                     }
                 }
             }

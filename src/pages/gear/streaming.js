@@ -26,7 +26,7 @@ export default function StreamGear({data}) {
                     {items.map(item => (
                         <GearCard 
                             key={item.node.id}
-                            href={item.node.data.URL}
+                            to={`${encodeURIComponent(item.node.data.Type.replace(/\s+/g, '-').toLowerCase())}/${encodeURIComponent(item.node.data.Name.replace(/\s+/g, '-').toLowerCase())}-${encodeURIComponent(item.node.data.Brand.replace(/\s+/g, '-').toLowerCase())}`}
                             title={item.node.data.Name}
                             brand={item.node.data.Brand}
                             category={item.node.data.Category}
