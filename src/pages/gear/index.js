@@ -25,7 +25,7 @@ export default function GearPage() {
                         </LinkCard>
                         <LinkCard to="/gear/streaming">
                             <Icon shape="gamer" color="white" size="48px" />
-                            <span>Live Streaming Gear</span>
+                            <span>Live Stream Gear</span>
                         </LinkCard>
                     </LinkGalleryWrap>
                 </Contain>

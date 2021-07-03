@@ -8,14 +8,14 @@ export default function VideosGrid({videos}) {
     return (
         <VideosGridWrap>
             {videos.map(video => (
-                <Link to={`/video/${video.node.videoId}`}>
-                    <VideoCard>
+                <VideoCard>
+                    <Link to={`/video/${video.node.videoId}`}>
                         <CardImage>
                             <GatsbyImage image={getImage(video.node.localThumbnail)} />
                         </CardImage>
                         <p>{video.node.title}</p>
-                    </VideoCard>
-                </Link>
+                    </Link>
+                </VideoCard>
             ))}
         </VideosGridWrap>
     )
