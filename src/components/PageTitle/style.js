@@ -11,6 +11,8 @@ const PageTitleWrap = styled.div`
         text-align: center;
     }
     p {
+        color: rgba(255,255,255,0.6);
+        font-size: 0.84em;
         font-weight:300;
         max-width:480px;
     }

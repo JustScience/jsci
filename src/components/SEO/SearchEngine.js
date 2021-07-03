@@ -24,6 +24,7 @@ export default function SearchEngine({ title, description, image, url }) {
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || defaultMetaImage
+  const canonUrl = site.siteMetadata.siteUrl + '/' + url || site.siteMetadata.siteUrl
 
   return (
     <Helmet 
@@ -39,12 +40,12 @@ export default function SearchEngine({ title, description, image, url }) {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-      <link rel="canonical" href={site.siteMetadata.siteUrl} />
+      <link rel="canonical" href={canonUrl} />
       <meta name="description" content={metaDescription} />
       <meta name="image" content={metaImage} />
 
       {/* OpenGraph tags */}
-      <meta property="og:url" content={url || site.siteMetadata.siteUrl} />
+      <meta property="og:url" content={canonUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content={metaTitle} />

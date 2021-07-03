@@ -8,7 +8,11 @@ import FormCTA from '../../../components/FormCTA'
 export default function FreeTrapBeats() {
     return (
         <>
-            <SearchEngine />
+            <SearchEngine
+                url="free/beats"
+                title="Free Beats" 
+                description="Download free hip hop beats and r&amp;b instrumntals for recording artists."
+            />
             <Layout>
                 <Hero />
                 <FormCTA>

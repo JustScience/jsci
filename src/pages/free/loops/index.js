@@ -8,7 +8,11 @@ import FormCTA from '../../../components/FormCTA'
 export default function FreeMelodyLoops() {
     return (
         <>
-            <SearchEngine />
+            <SearchEngine
+                url="free/loops"
+                title="Free Melody Loops" 
+                description="Download free melody loops and compositions for music producers."
+            />
             <Layout>
                 <Hero />
                 <FormCTA>

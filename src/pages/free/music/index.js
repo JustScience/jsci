@@ -8,7 +8,11 @@ import FormCTA from '../../../components/FormCTA'
 export default function FreeBackgroundMusic() {
     return (
         <>
-            <SearchEngine />
+            <SearchEngine
+                url="free/music"
+                title="Free Sync Music" 
+                description="Download free background sync music for filmmakers and content creators."
+            />
             <Layout>
                 <Hero />
                 <FormCTA>

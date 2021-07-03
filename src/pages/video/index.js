@@ -14,6 +14,7 @@ export default function YouTubePage({data}) {
     return (
         <>
             <SearchEngine 
+                url="video"
                 title="YouTube Videos by JustScience" 
                 description="Learn Music Production and Marketing with tutorials and demo videos by JustScience"
             />

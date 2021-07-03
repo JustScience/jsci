@@ -11,7 +11,11 @@ import '../../styles/global.css'
 const IndexPage = () => {
   return (
     <>
-      <SearchEngine />
+      <SearchEngine
+        url="free"
+        title="Free Tools for Musicians and Content Creators" 
+        description="Download free tools for music producers, recording artists, and content creators."
+      />
       <Layout>
         <Hero />
         <LinksGallery />
