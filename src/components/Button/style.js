@@ -25,5 +25,19 @@ const HrefWrap = styled.a`
         background-color: rgba(255,255,255,0.3);
     }
 `
+const BtnWrap = styled.a`
+    background-color: darkslateblue;
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    cursor: pointer;
+    display: block;
+    padding: 12px 24px;
+    text-align: center;
+    transition: background-color 240ms ease-in-out;
 
-export { ButtonWrap, HrefWrap}
+    &:hover {
+        background-color: slateblue;
+    }
+`
+
+export { ButtonWrap, HrefWrap, BtnWrap }

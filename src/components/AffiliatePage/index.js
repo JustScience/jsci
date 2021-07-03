@@ -1,6 +1,6 @@
 import React from 'react'
 import { AffiliatePageWrap, AffiliateImage, AffiliateInfo } from './style'
-import Href from '../Button/href'
+import Btn from '../Button/aBtn'
 
 export default function AffiliatePage({ name, brand, description, image, url }) {
     return (
@@ -15,7 +15,7 @@ export default function AffiliatePage({ name, brand, description, image, url }) 
                     <span> by {brand}</span>
                 </h1>
                 <p>{description}</p>
-                <Href href={url}>Shop for {name}</Href>
+                <Btn href={url}>Shop for {name}</Btn>
             </AffiliateInfo>
         </AffiliatePageWrap>
     )
