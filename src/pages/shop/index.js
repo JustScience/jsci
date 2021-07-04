@@ -5,11 +5,10 @@ import ProductContext from '../../context/ProductContext'
 
 import Filters from '../../components/Filters'
 import Layout from '../../components/Layout'
-import { HeaderSpacer } from '../../components/Layout/style'
 import ShopPage from '../../components/ShopPage'
 import ProductsGrid from '../../components/ProductsGrid'
 
-export default function ShopIndex() {
+export default function ShopIndex({location}) {
     const { products, collections } = React.useContext(ProductContext)
     const collectionProductMap = {}
     const { search } = useLocation()
@@ -56,9 +55,8 @@ export default function ShopIndex() {
     const filteredProducts = products.filter(filterByCategory).filter(filterBySearchTerm)
 
     return (
-        <Layout>
-            <HeaderSpacer />
-            <ShopPage>
+        <Layout location={location} crumbLabel="Shop" >
+        <ShopPage>
                 <Filters />
                 {!filteredProducts.length &&
                     <div>

@@ -7,7 +7,7 @@ const HeroWrap = styled.section`
     grid-area: 1/1;
     height: 200px;
     margin: 0;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 100%;
 
     ${media.tablet`

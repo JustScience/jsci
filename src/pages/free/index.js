@@ -8,7 +8,7 @@ import LinksGallery from '../../components/LinksGallery'
 import '../../styles/global.css'
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({location}) => {
   return (
     <>
       <SearchEngine
@@ -16,7 +16,7 @@ const IndexPage = () => {
         title="Free Tools for Musicians and Content Creators" 
         description="Download free tools for music producers, recording artists, and content creators."
       />
-      <Layout>
+        <Layout location={location} crumbLabel="Freebies" >
         <Hero />
         <LinksGallery />
       </Layout>

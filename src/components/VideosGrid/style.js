@@ -31,6 +31,8 @@ const VideoCard = styled.li`
     width: 100%;
 
     &:hover {background-color: rgba(255,255,255,0.3);}
+
+    p {color: white;}
 `
 const CardImage = styled.div`
     align-items: center;

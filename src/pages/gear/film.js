@@ -9,13 +9,13 @@ import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export default function FilmGear({data}) {
+export default function FilmGear({data, location}) {
     const items = data.allAirtable.edges
      
     return (
         <>
             <SearchEngine title="Best YouTube Studio Gear Wish Lists" />
-            <Layout>
+            <Layout location={location} crumbLabel="Film Gear" >
                 <Hero />
                 <PageTitle 
                     title="YouTube Studio Gear"

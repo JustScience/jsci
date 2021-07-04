@@ -1,0 +1,45 @@
+.breadcrumb {
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+    padding: 4px 12px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 99999;
+}
+.breadcrumb__title {
+    color: red;
+}
+.breadcrumb__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb__list__item {
+    display: inline-block;
+    padding: 6px;
+}
+.breadcrumb__link {
+    color: rgba(255,255,255,0.48);
+    transition: color 240ms ease-in-out;
+}
+.breadcrumb__link:hover {
+    color: rgba(255,255,255,0.9);
+}
+.breadcrumb__link__active {
+    color: orange;
+    cursor: default;
+}
+.breadcrumb__link__active:hover {
+    color: orange;
+}
+.breadcrumb__separator {
+    color: rgba(255,255,255,0.48);
+    font-size: 0.75em;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+

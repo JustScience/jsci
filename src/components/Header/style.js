@@ -65,7 +65,7 @@ const NavWrap = styled.nav`
 const NavItem = styled(GatsbyLink)`
     border: solid 1px transparent;
     border-radius: 12px;
-    color: ${color.primary.base};
+    color: white;
     font-size: 0.9em;
     margin-left: 4px;
     padding: 8px 12px;

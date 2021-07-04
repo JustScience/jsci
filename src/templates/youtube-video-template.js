@@ -5,7 +5,6 @@ import { graphql } from 'gatsby'
 import SearchEngine from '../components/SEO/SearchEngine'
 import Layout from '../components/Layout'
 import VideoPage from '../components/VideoPage'
-import { HeaderSpacer } from '../components/Layout/style'
 
 export const query = graphql`
     query youtubeVideo($id: String) {
@@ -20,7 +19,7 @@ export const query = graphql`
     }
 `;
 
-export default function YouTubeVideo({data}) {
+export default function YouTubeVideo({data, location}) {
     const { title, description, videoId, thumbnail } = data.video
     const shareImage = thumbnail.url
 
@@ -31,8 +30,7 @@ export default function YouTubeVideo({data}) {
                 description={description}
                 image={shareImage}
             />
-            <Layout>
-                <HeaderSpacer />
+            <Layout location={location} crumbLabel={title} >
                 <VideoPage
                     title={title}
                     description={description}

@@ -48,7 +48,7 @@ const MobileNavTrigger = styled.div`
 const MobileNavItem = styled(GatsbyLink)`
     border: solid 1px transparent;
     border-radius: 12px;
-    color: ${color.primary.base};
+    color: white;
     font-size: 0.9em;
     margin-bottom: 8px;
     padding: 8px 12px;

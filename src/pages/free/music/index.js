@@ -5,7 +5,7 @@ import Hero from '../../../components/Hero'
 import JoinForm from '../../../components/JoinForm'
 import FormCTA from '../../../components/FormCTA'
 
-export default function FreeBackgroundMusic() {
+export default function FreeBackgroundMusic({location}) {
     return (
         <>
             <SearchEngine
@@ -13,7 +13,7 @@ export default function FreeBackgroundMusic() {
                 title="Free Sync Music" 
                 description="Download free background sync music for filmmakers and content creators."
             />
-            <Layout>
+                <Layout location={location} crumbLabel="Sync Music" >
                 <Hero />
                 <FormCTA>
                     <JoinForm tag="Creator" gift="Tracks" />

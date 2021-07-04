@@ -11,13 +11,13 @@ import Section from '../components/Section'
 import SearchEngine from "../components/SEO/SearchEngine"
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({location}) => {
   const {collections} = React.useContext(ProductContext)
 
   return (
     <>
     <SearchEngine />
-    <Layout>
+    <Layout location={location} crumbLabel="Home" >
       <Hero />
       <Section>
         {/* <HomepageCollectionsGrid collections={collections} /> */}

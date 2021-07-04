@@ -11,7 +11,6 @@ import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import ProductImageGallery from './product-image-gallery'
 import Layout from '../components/Layout'
 import Contain from '../components/Contain'
-import { HeaderSpacer } from '../components/Layout/style'
 import ProductPage from '../components/ProductPage'
 import { 
     ProductInfo, 
@@ -62,7 +61,7 @@ export const query = graphql`
     }
 `;
 
-export default function ShopifyProduct({data}) {
+export default function ShopifyProduct({data, location}) {
     const { title, description, storefrontId } = data.product
     const { Tagline, Genre, SubGenre, Mood, Preview, ProductType } = data.productInfo.data
     const Audio = Preview[0].url
@@ -99,8 +98,7 @@ export default function ShopifyProduct({data}) {
                 description={data.product.description}
                 image={data.product.images[0]}
             />
-            <Layout>
-                <HeaderSpacer />
+            <Layout location={location} crumbLabel={data.product.title} >
                 <Contain>
                     <ProductPage>
                         <ProductImageGallery 

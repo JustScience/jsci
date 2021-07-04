@@ -7,11 +7,11 @@ import FormCTA from '../components/FormCTA'
 import Form from '../components/Form'
 import { FormField } from '../components/Form/style'
 
-export default function SendGridUI() {
+export default function SendGridUI({location}) {
   return (
     <>
       <SearchEngine title="Contact JSci" />
-      <Layout>
+      <Layout location={location} crumbLabel="Contact Me" >
         <Hero />
         <Section>
           <FormCTA>

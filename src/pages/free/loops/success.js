@@ -9,9 +9,9 @@ import AudioProduct from './../../../components/AudioProduct'
 import downloadFile1 from '/src/freebies/Hydro Flask-Bm-96bpm.mp3'
 import downloadFile2 from './../../../freebies/No122-136bpm-E.mp3'
 
-export default function Success() {
+export default function Success({location}) {
     return (
-        <Layout>
+        <Layout location={location} crumbLabel="Success" >
             <Hero />
             <PageTitle
                 title="Thank you for subscribing!"

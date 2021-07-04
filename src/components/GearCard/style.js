@@ -27,6 +27,7 @@ const GearList = styled.ul`
 const GearCardWrap = styled(GatsbyLink)`
     background-color: rgba(255,255,255,0.15);
     border-radius: 4px;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

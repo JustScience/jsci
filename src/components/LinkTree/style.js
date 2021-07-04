@@ -26,6 +26,7 @@ const SocialCard = styled.a.attrs( props => {
     align-items: center;
     background-color: rgba(255,255,255,0.15);
     border-radius: 12px;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;

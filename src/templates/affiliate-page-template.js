@@ -5,7 +5,6 @@ import { graphql } from 'gatsby'
 import SearchEngine from '../components/SEO/SearchEngine'
 import Layout from '../components/Layout'
 import AffiliatePage from '../components/AffiliatePage'
-import { HeaderSpacer } from '../components/Layout/style'
 
 export const query = graphql`
     query affiliateQuery($id: String) {
@@ -23,7 +22,7 @@ export const query = graphql`
     }
  `;
 
-export default function AffiliateLinkPage({data}) {
+export default function AffiliateLinkPage({data, location}) {
     const { Name, Brand, Description, Image, URL } = data.affiliate.data
     const shareImage = Image[0].url
 
@@ -34,8 +33,7 @@ export default function AffiliateLinkPage({data}) {
                 description={Description}
                 // image={shareImage}
             />
-            <Layout>
-                <HeaderSpacer />
+            <Layout location={location} crumbLabel={Name} >
                 <AffiliatePage
                     name={Name}
                     brand={Brand}

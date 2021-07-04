@@ -9,14 +9,14 @@ import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export default function MusicGear({data}) {
+export default function MusicGear({data, location}) {
     const hardware = data.hardware.edges
     const software = data.software.edges
      
     return (
         <>
             <SearchEngine title="Best Music Studio Gear Wish Lists" />
-            <Layout>
+            <Layout location={location} crumbLabel="Music Gear" >
                 <Hero />
                 <PageTitle 
                     title="Music Studio Gear"

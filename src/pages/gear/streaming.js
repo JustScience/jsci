@@ -9,13 +9,13 @@ import SectionTitle from '../../components/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
-export default function StreamGear({data}) {
+export default function StreamGear({data, location}) {
     const items = data.allAirtable.edges
      
     return (
         <>
             <SearchEngine title="Best Live Streamer Gear Wish Lists" />
-            <Layout>
+            <Layout location={location} crumbLabel="Streaming Gear" >
                 <Hero />
                 <PageTitle 
                     title="Live Streaming Gear"

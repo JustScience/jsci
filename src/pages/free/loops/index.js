@@ -5,7 +5,7 @@ import Hero from '../../../components/Hero'
 import JoinForm from '../../../components/JoinForm'
 import FormCTA from '../../../components/FormCTA'
 
-export default function FreeMelodyLoops() {
+export default function FreeMelodyLoops({location}) {
     return (
         <>
             <SearchEngine
@@ -13,7 +13,7 @@ export default function FreeMelodyLoops() {
                 title="Free Melody Loops" 
                 description="Download free melody loops and compositions for music producers."
             />
-            <Layout>
+                <Layout location={location} crumbLabel="Melody Loops" >
                 <Hero />
                 <FormCTA>
                     <JoinForm tag="Producer" gift="Loops" />

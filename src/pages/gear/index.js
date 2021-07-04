@@ -7,11 +7,11 @@ import Hero from '../../components/Hero'
 import Icon from '../../components/Icon'
 import { LinkGalleryWrap, LinkCard } from '../../components/LinksGallery/style'
 
-export default function GearPage() {
+export default function GearPage({location}) {
     return (
         <>
             <SearchEngine title="Best Studio Gear Wish Lists" />
-            <Layout>
+            <Layout location={location} crumbLabel="My Studio" >
                 <Hero />
                 <Contain>
                     <LinkGalleryWrap>

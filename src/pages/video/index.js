@@ -8,7 +8,7 @@ import PageTitle from '../../components/PageTitle'
 import Hero from '../../components/Hero'
 import VideosGrid from '../../components/VideosGrid'
 
-export default function YouTubePage({data}) {
+export default function YouTubePage({data, location}) {
     const videos = data.allYoutubeVideo.edges
 
     return (
@@ -18,7 +18,7 @@ export default function YouTubePage({data}) {
                 title="YouTube Videos by JustScience" 
                 description="Learn Music Production and Marketing with tutorials and demo videos by JustScience"
             />
-            <Layout>
+                <Layout location={location} crumbLabel="YouTube Videos" >
                 <Hero />
                 <Section>
                     <PageTitle 

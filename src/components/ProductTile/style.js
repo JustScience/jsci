@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const ProductTileWrap = styled.div`
+    color: white;
     height: 100%;
     position: relative;
     width: 100%;  
