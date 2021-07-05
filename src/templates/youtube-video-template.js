@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import SearchEngine from '../components/SEO/SearchEngine'
 import Layout from '../components/5-layout/Layout'
-import VideoPage from '../components/VideoPage'
+import VideoPage from '../components/4-pages/VideoPage'
 
 export const query = graphql`
     query youtubeVideo($id: String) {

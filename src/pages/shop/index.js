@@ -5,7 +5,7 @@ import ProductContext from '../../context/ProductContext'
 
 import Filters from '../../components/Filters'
 import Layout from '../../components/5-layout/Layout'
-import ShopPage from '../../components/ShopPage'
+import ShopPage from '../../components/4-pages/ShopPage'
 import ProductsGrid from '../../components/ProductsGrid'
 
 export default function ShopIndex({location}) {

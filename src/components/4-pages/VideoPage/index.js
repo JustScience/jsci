@@ -1,6 +1,6 @@
 import React from 'react'
 import { VideoPageWrap, VideoInfo } from './style'
-import VideoFrame from '../VideoFrame'
+import VideoFrame from '../../VideoFrame'
 
 export default function VideoPage({ title, description, videoId }) {
     return (

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import media from '../Responsive/media'
+import media from '../../Responsive/media'
 
 const ProductWrap = styled.section`
     display: grid;

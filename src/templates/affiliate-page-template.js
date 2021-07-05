@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import SearchEngine from '../components/SEO/SearchEngine'
 import Layout from '../components/5-layout/Layout'
-import AffiliatePage from '../components/AffiliatePage'
+import AffiliatePage from '../components/4-pages/AffiliatePage'
 
 export const query = graphql`
     query affiliateQuery($id: String) {

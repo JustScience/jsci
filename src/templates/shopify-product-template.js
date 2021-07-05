@@ -11,7 +11,7 @@ import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import ProductImageGallery from './product-image-gallery'
 import Layout from '../components/5-layout/Layout'
 import Contain from '../components/1-elements/Contain'
-import ProductPage from '../components/ProductPage'
+import ProductPage from '../components/4-pages/ProductPage'
 import { 
     ProductInfo, 
     ProductTitle, 
@@ -21,7 +21,7 @@ import {
     ProductStat, 
     ProductPrice, 
     ProductPurchaseWrap,
-    ProductPurchase } from '../components/ProductPage/style'
+    ProductPurchase } from '../components/4-pages/ProductPage/style'
 
 import 'react-h5-audio-player/lib/styles.css'
 
