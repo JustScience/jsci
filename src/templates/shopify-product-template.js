@@ -10,7 +10,7 @@ import SearchEngine from '../components/SEO/SearchEngine'
 import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import ProductImageGallery from './product-image-gallery'
 import Layout from '../components/5-environments/Layout'
-import Contain from '../components/Contain'
+import Contain from '../components/1-atoms/Contain'
 import ProductPage from '../components/ProductPage'
 import { 
     ProductInfo, 

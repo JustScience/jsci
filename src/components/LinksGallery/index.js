@@ -1,6 +1,6 @@
 import React from 'react'
-import Contain from './../Contain'
-import Icon from './../Icon'
+import Contain from '../1-atoms/Contain'
+import Icon from '../Icon'
 import { LinkGalleryWrap, LinkCard } from './style'
 
 export default function LinksGallery() {

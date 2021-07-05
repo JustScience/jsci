@@ -6,7 +6,7 @@ import Layout from '../components/5-environments/Layout'
 import FeaturedProducts from "../components/FeaturedProducts"
 import Hero from '../components/Hero'
 // import Banner from '../components/Banner'
-import Section from '../components/Section'
+import Section from '../components/1-atoms/Section'
 // import Button from '../components/Button'
 import SearchEngine from "../components/SEO/SearchEngine"
 

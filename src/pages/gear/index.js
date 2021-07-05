@@ -2,7 +2,7 @@ import React from 'react'
 
 import SearchEngine from "../../components/SEO/SearchEngine"
 import Layout from '../../components/5-environments/Layout'
-import Contain from '../../components/Contain'
+import Contain from '../../components/1-atoms/Contain'
 import Hero from '../../components/Hero'
 import Icon from '../../components/Icon'
 import { LinkGalleryWrap, LinkCard } from '../../components/LinksGallery/style'

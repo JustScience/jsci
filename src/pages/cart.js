@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/5-environments/Layout'
 import SearchEngine from '../components/SEO/SearchEngine'
-import Section from '../components/Section'
+import Section from '../components/1-atoms/Section'
 import CartContents from '../components/CartContents'
 
 export default function cart({location}) {
