@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import media from '../Responsive/media'
+import media from '../0-theme/Responsive/media'
 import { Link as GatsbyLink } from 'gatsby'
 
 const GearList = styled.ul`

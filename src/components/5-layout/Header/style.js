@@ -1,7 +1,7 @@
 import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
 import color from '../../0-theme/Color'
-import media from '../../Responsive/media'
+import media from '../../0-theme/Responsive/media'
 
 const HeaderWrap = styled.div`
     align-items: center;

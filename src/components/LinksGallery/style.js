@@ -1,6 +1,6 @@
 import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
-import media from './../Responsive/media'
+import media from './../0-theme/Responsive/media'
 
 const LinkGalleryWrap = styled.section`
     display: grid;

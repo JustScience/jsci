@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import media from '../Responsive/media'
+import media from '../0-theme/Responsive/media'
 import formCTAImage from './../../images/form-cta-image.png'
 
 const FormCTAWrap = styled.section`

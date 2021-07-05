@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import media from '../../components/Responsive/media'
+import media from '../../components/0-theme/Responsive/media'
 
 const VideosGridWrap = styled.ul`
     display: grid;
