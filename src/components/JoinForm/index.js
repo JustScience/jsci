@@ -1,6 +1,6 @@
 import React from 'react'
-import Form from '../Form'
-import { FormField } from '../Form/style'
+import Form from '../2-blocks/Form'
+import { FormField } from '../2-blocks/Form/style'
 
 export default function JoinForm({tag, gift}) {
     return (

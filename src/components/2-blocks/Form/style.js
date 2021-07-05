@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import media from './../0-theme/Responsive/media'
+import media from '../../0-theme/Responsive/media'
 
 const FormWrap = styled.form`
     margin: 0 auto;

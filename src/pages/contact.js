@@ -4,8 +4,8 @@ import Layout from '../components/5-layout/Layout'
 import Hero from '../components/3-sections/Hero'
 import Section from '../components/1-elements/Section'
 import FormCTA from '../components/FormCTA'
-import Form from '../components/Form'
-import { FormField } from '../components/Form/style'
+import Form from '../components/2-blocks/Form'
+import { FormField } from '../components/2-blocks/Form/style'
 
 export default function SendGridUI({location}) {
   return (

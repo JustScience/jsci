@@ -1,7 +1,7 @@
 import React from 'react'
 import {navigate} from 'gatsby'
 import { CartItem, CartFooter, CartNav, CartNavButton } from './style'
-import CartContext from '../../context/CartContext'
+import CartContext from '../../../context/CartContext'
 import QuantityAdjuster from './QuantityAdjuster'
 import RemoveLineItem from './RemoveLineItem'
 
