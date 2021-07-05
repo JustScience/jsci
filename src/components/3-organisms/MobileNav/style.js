@@ -1,7 +1,7 @@
 import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
-import color from '../Theme/Color'
-import media from '../Responsive/media'
+import color from '../../Theme/Color'
+import media from '../../Responsive/media'
 
 const MobileNavWrap = styled.nav`
     align-items: flex-end;

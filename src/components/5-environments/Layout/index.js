@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../Header'
-import MobileNav from '../../MobileNav'
+import Header from '../../3-organisms/Header'
+import MobileNav from '../../3-organisms/MobileNav'
 import Breadcrumbs from '../../1-atoms/Breadcrumbs'
 // import Footer from '../Footer'
 // import Responsive from '../Responsive'
