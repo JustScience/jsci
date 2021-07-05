@@ -1,6 +1,6 @@
 import React from 'react'
 import { AffiliatePageWrap, AffiliateImage, AffiliateInfo } from './style'
-import Btn from '../../Button/aBtn'
+import Btn from '../../1-elements/Button/aBtn'
 
 export default function AffiliatePage({ name, brand, description, image, url }) {
     return (

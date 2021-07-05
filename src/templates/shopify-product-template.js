@@ -3,15 +3,15 @@ import React from 'react'
 import { graphql, navigate } from 'gatsby'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
-import AudioPreview from '../components/2-blocks/AudioPreview';
 import CartContext from '../context/CartContext'
-
 import SearchEngine from '../components/0-theme/SEO/SearchEngine'
-import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
-import ProductImageGallery from './product-image-gallery'
+
 import Layout from '../components/5-layout/Layout'
 import Contain from '../components/1-elements/Contain'
+import AudioPreview from '../components/2-blocks/AudioPreview';
 import ProductPage from '../components/4-pages/ProductPage'
+import ProductImageGallery from './product-image-gallery'
+import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import { 
     ProductInfo, 
     ProductTitle, 
@@ -158,8 +158,6 @@ export default function ShopifyProduct({data, location}) {
                         </ProductInfo>
                     </ProductPage>
                 </Contain>
-                {/* TODO */}
-                {/* <ShopifyAudioPreview /> */}
             </Layout>
         </>
     )
