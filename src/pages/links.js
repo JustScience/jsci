@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/5-layout/Layout'
-import Hero from '../components/Hero'
+import Hero from '../components/3-sections/Hero'
 import LinkTree from '../components/LinkTree'
 import SearchEngine from "../components/0-theme/SEO/SearchEngine"
 

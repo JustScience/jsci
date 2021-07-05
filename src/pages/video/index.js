@@ -5,7 +5,7 @@ import SearchEngine from "../../components/0-theme/SEO/SearchEngine"
 import Layout from '../../components/5-layout/Layout'
 import Section from '../../components/1-elements/Section'
 import PageTitle from '../../components/1-elements/PageTitle'
-import Hero from '../../components/Hero'
+import Hero from '../../components/3-sections/Hero'
 import VideosGrid from '../../components/VideosGrid'
 
 export default function YouTubePage({data, location}) {

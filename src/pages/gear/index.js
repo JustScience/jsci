@@ -3,7 +3,7 @@ import React from 'react'
 import SearchEngine from "../../components/0-theme/SEO/SearchEngine"
 import Layout from '../../components/5-layout/Layout'
 import Contain from '../../components/1-elements/Contain'
-import Hero from '../../components/Hero'
+import Hero from '../../components/3-sections/Hero'
 import Icon from '../../components/1-elements/Icon'
 import { LinkGalleryWrap, LinkCard } from '../../components/LinksGallery/style'
 
