@@ -6,7 +6,7 @@ import queryString from 'query-string'
 import AudioPreview from '../components/2-blocks/AudioPreview';
 import CartContext from '../context/CartContext'
 
-import SearchEngine from '../components/SEO/SearchEngine'
+import SearchEngine from '../components/0-theme/SEO/SearchEngine'
 import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import ProductImageGallery from './product-image-gallery'
 import Layout from '../components/5-layout/Layout'

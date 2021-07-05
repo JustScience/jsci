@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/5-layout/Layout'
 import Hero from '../components/Hero'
 import LinkTree from '../components/LinkTree'
-import SearchEngine from "../components/SEO/SearchEngine"
+import SearchEngine from "../components/0-theme/SEO/SearchEngine"
 
 export default function LinksPage({location}) {
     return (

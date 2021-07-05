@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SearchEngine from '../components/SEO/SearchEngine'
+import SearchEngine from '../components/0-theme/SEO/SearchEngine'
 import PageTitle from '../components/PageTitle'
 import Layout from '../components/5-environments/Layout'
 

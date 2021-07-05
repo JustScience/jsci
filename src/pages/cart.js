@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/5-layout/Layout'
-import SearchEngine from '../components/SEO/SearchEngine'
+import SearchEngine from '../components/0-theme/SEO/SearchEngine'
 import Section from '../components/1-elements/Section'
 import CartContents from '../components/CartContents'
 

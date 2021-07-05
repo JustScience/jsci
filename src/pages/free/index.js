@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import SearchEngine from "../../components/SEO/SearchEngine"
+import SearchEngine from "../../components/0-theme/SEO/SearchEngine"
 import Layout from '../../components/5-layout/Layout'
 import Hero from '../../components/Hero'
 import LinksGallery from '../../components/LinksGallery'

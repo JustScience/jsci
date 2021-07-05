@@ -2,6 +2,7 @@ import React from 'react'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
 import ProductContext from '../../context/ProductContext'
+import SearchEngine from "../../components/0-theme/SEO/SearchEngine"
 
 import Filters from '../../components/Filters'
 import Layout from '../../components/5-layout/Layout'
@@ -55,45 +56,51 @@ export default function ShopIndex({location}) {
     const filteredProducts = products.filter(filterByCategory).filter(filterBySearchTerm)
 
     return (
-        <Layout location={location} crumbLabel="Shop" >
-        <ShopPage>
-                <Filters />
-                {!filteredProducts.length &&
-                    <div>
-                        <h3>
-                            <span>
-                                Oh No! Nothing matches 
-                            </span>
-                            &nbsp;
-                            <strong>
-                                '{searchTerm}'
-                            </strong>
-                        </h3>
+        <>
+            <SearchEngine 
+                title="Melody Loops Shop" 
+                description="Melody Loops and Composition Samples, Tools for Music Producers" 
+            />
+            <Layout location={location} crumbLabel="Shop" >
+            <ShopPage>
+                    <Filters />
+                    {!filteredProducts.length &&
                         <div>
-                            To help with your search, why not try:
-                            <br />
-                            <ul>
-                                <li>- Checking for spelling mistakes</li>
-                                <li>- Using fewer words</li>
-                                <li>- Searching for a different term</li>
-                            </ul>
+                            <h3>
+                                <span>
+                                    Oh No! Nothing matches 
+                                </span>
+                                &nbsp;
+                                <strong>
+                                    '{searchTerm}'
+                                </strong>
+                            </h3>
+                            <div>
+                                To help with your search, why not try:
+                                <br />
+                                <ul>
+                                    <li>- Checking for spelling mistakes</li>
+                                    <li>- Using fewer words</li>
+                                    <li>- Searching for a different term</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                }
-                {!!filteredProducts.length &&
-                    <div>
-                        {!!searchTerm && !!filteredProducts.length && (
-                            <h4>
-                                Search Term: <strong>'{searchTerm}'</strong>
-                            </h4>
-                        )}
-                        {/* {!!filteredProducts.length &&
-                            <p>&nbsp;&nbsp;&nbsp;{filteredProducts.length} products</p>
-                        } */}
-                        <ProductsGrid products={filteredProducts} />
-                    </div>
-                }
-            </ShopPage>
-        </Layout>
+                    }
+                    {!!filteredProducts.length &&
+                        <div>
+                            {!!searchTerm && !!filteredProducts.length && (
+                                <h4>
+                                    Search Term: <strong>'{searchTerm}'</strong>
+                                </h4>
+                            )}
+                            {/* {!!filteredProducts.length &&
+                                <p>&nbsp;&nbsp;&nbsp;{filteredProducts.length} products</p>
+                            } */}
+                            <ProductsGrid products={filteredProducts} />
+                        </div>
+                    }
+                </ShopPage>
+            </Layout>
+        </>
     )
 }

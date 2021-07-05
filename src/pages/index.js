@@ -8,7 +8,7 @@ import Hero from '../components/Hero'
 // import Banner from '../components/Banner'
 import Section from '../components/1-elements/Section'
 // import Button from '../components/Button'
-import SearchEngine from "../components/SEO/SearchEngine"
+import SearchEngine from "../components/0-theme/SEO/SearchEngine"
 
 // markup
 const IndexPage = ({location}) => {

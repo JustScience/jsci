@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import defaultMetaImage from '../../images/hero-bg.jpg'
+import defaultMetaImage from '../../../images/hero-bg.jpg'
 
 export default function SearchEngine({ title, description, image, url }) {
   const { site } = useStaticQuery(
