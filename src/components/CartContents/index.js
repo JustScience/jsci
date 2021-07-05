@@ -7,7 +7,6 @@ import RemoveLineItem from './RemoveLineItem'
 
 export default function CartContents() {
     const {checkout, updateLineItem} = React.useContext(CartContext)
-    console.log(checkout?.lineItems)
 
     const handleAdjustQuantity = ({quantity, variantId}) => {
         updateLineItem({quantity, variantId})
@@ -18,6 +17,7 @@ export default function CartContents() {
             <h1>Shopping Cart</h1>
             {checkout?.lineItems?.map(item => (
                 <CartItem key={item.variant.id}>
+                    {/* Add Audio Preview */}
                     <div>
                         {item.title}
                     </div>

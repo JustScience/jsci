@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SearchEngine from "../../components/SEO/SearchEngine"
-import Layout from '../../components/Layout'
+import Layout from '../../components/5-environments/Layout'
 import Contain from '../../components/Contain'
 import Hero from '../../components/Hero'
 import Icon from '../../components/Icon'

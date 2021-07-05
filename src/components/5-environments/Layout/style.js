@@ -8,7 +8,7 @@ const LayoutWrap = styled.main`
     width: 100%;
 `
 const HeaderSpacer = styled.div`
-    height: 54px;
+    height: 50px;
 `
 
 export { LayoutWrap, HeaderSpacer }

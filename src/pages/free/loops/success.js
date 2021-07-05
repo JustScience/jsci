@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Layout from './../../../components/Layout'
-import Hero from './../../../components/Hero'
-import PageTitle from './../../../components/PageTitle'
-import FreebieGallery from './../../../components/FreebieGallery'
-import AudioProduct from './../../../components/AudioProduct'
+import Layout from '../../../components/5-environments/Layout'
+import Hero from '../../../components/Hero'
+import PageTitle from '../../../components/PageTitle'
+import FreebieGallery from '../../../components/FreebieGallery'
+import AudioProduct from '../../../components/AudioProduct'
 
 import downloadFile1 from '/src/freebies/Hydro Flask-Bm-96bpm.mp3'
 import downloadFile2 from './../../../freebies/No122-136bpm-E.mp3'

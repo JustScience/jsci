@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/5-environments/Layout'
 import SearchEngine from '../components/SEO/SearchEngine'
 import Section from '../components/Section'
 import CartContents from '../components/CartContents'

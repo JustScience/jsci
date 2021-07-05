@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../Header'
-import MobileNav from '../MobileNav'
-import Breadcrumbs from '../Breadcrumbs'
+import Header from '../../Header'
+import MobileNav from '../../MobileNav'
+import Breadcrumbs from '../../1-atoms/Breadcrumbs'
 // import Footer from '../Footer'
 // import Responsive from '../Responsive'
 import { LayoutWrap, HeaderSpacer } from './style'
 
-import '../../styles/global.css'
+import '../../0-particles/global.css'
 
 export default function Layout({ children, location, crumbLabel }) {
     return (

@@ -4,7 +4,7 @@ import queryString from 'query-string'
 import ProductContext from '../../context/ProductContext'
 
 import Filters from '../../components/Filters'
-import Layout from '../../components/Layout'
+import Layout from '../../components/5-environments/Layout'
 import ShopPage from '../../components/ShopPage'
 import ProductsGrid from '../../components/ProductsGrid'
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import SearchEngine from '../components/SEO/SearchEngine'
 import PageTitle from '../components/PageTitle'
-import Layout from '../components/Layout'
+import Layout from '../components/5-environments/Layout'
 
 export default function defaultPageLayout() {
     return (

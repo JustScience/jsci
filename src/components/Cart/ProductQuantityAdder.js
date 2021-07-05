@@ -21,7 +21,7 @@ const Button = styled.button`
     }
 `
 
-export default function ProductQuantityAdder({variantId, available}) {
+export default function ProductQuantityAdder({shopifyId,variantId, available}) {
     const [quantity, setQuantity] = React.useState(1)
     const {updateLineItem} = React.useContext(CartContext)
 
@@ -30,7 +30,7 @@ export default function ProductQuantityAdder({variantId, available}) {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        updateLineItem({variantId, quantity: parseInt(quantity, 10)})
+        updateLineItem({shopifyId,variantId, quantity: parseInt(quantity, 10)})
     }
     return (
         <div>
