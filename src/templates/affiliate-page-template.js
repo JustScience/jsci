@@ -3,7 +3,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import SearchEngine from '../components/SEO/SearchEngine'
-import Layout from '../components/5-environments/Layout'
+import Layout from '../components/5-layout/Layout'
 import AffiliatePage from '../components/AffiliatePage'
 
 export const query = graphql`

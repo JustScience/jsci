@@ -1,12 +1,12 @@
 import * as React from "react"
 import ProductContext from '../context/ProductContext'
 
-import Layout from '../components/5-environments/Layout'
+import Layout from '../components/5-layout/Layout'
 // import HomepageCollectionsGrid from '../components/HomepageCollectionsGrid'
 import FeaturedProducts from "../components/FeaturedProducts"
 import Hero from '../components/Hero'
 // import Banner from '../components/Banner'
-import Section from '../components/1-atoms/Section'
+import Section from '../components/1-elements/Section'
 // import Button from '../components/Button'
 import SearchEngine from "../components/SEO/SearchEngine"
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Contain from '../1-atoms/Contain'
+import Contain from '../1-elements/Contain'
 import Icon from '../Icon'
 import { LinkGalleryWrap, LinkCard } from './style'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Layout from '../../../components/5-environments/Layout'
+import Layout from '../../../components/5-layout/Layout'
 import Hero from '../../../components/Hero'
 import PageTitle from '../../../components/PageTitle'
 import FreebieGallery from '../../../components/FreebieGallery'

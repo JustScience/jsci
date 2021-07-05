@@ -1,5 +1,5 @@
 import React from 'react'
-import AudioPreview from '../AudioPreview'
+import AudioPreview from '../2-blocks/AudioPreview'
 import { AudioProductWrap, AudioProductInfo, AudioProductTitle, DownloadButton } from './style'
 
 export default function AudioProduct({ title, keySignature, tempo, src }) {

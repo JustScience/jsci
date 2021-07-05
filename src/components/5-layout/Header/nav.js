@@ -1,5 +1,5 @@
 import React from 'react'
-import color from '../../Theme/Color.js'
+import color from '../../0-theme/Color.js'
 
 import { NavWrap, NavItem } from './style.js'
 import Cart from '../../Cart'

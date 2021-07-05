@@ -3,14 +3,14 @@ import React from 'react'
 import { graphql, navigate } from 'gatsby'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
-import AudioPreview from '../components/AudioPreview';
+import AudioPreview from '../components/2-blocks/AudioPreview';
 import CartContext from '../context/CartContext'
 
 import SearchEngine from '../components/SEO/SearchEngine'
 import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
 import ProductImageGallery from './product-image-gallery'
-import Layout from '../components/5-environments/Layout'
-import Contain from '../components/1-atoms/Contain'
+import Layout from '../components/5-layout/Layout'
+import Contain from '../components/1-elements/Contain'
 import ProductPage from '../components/ProductPage'
 import { 
     ProductInfo, 

@@ -1,6 +1,6 @@
 import React from 'react'
 import ShopPageWrap from './style'
-import Section from '../1-atoms/Section'
+import Section from '../1-elements/Section'
 
 export default function ShopPage({ children }) {
     return (

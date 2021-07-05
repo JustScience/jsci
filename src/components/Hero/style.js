@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import color from './../Theme/Color'
+import color from './../0-theme/Color'
 import media from './../Responsive/media'
 
 const HeroWrap = styled.section`

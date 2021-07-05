@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import SearchEngine from "../../components/SEO/SearchEngine"
-import Layout from '../../components/5-environments/Layout'
-import Section from '../../components/1-atoms/Section'
+import Layout from '../../components/5-layout/Layout'
+import Section from '../../components/1-elements/Section'
 import PageTitle from '../../components/PageTitle'
 import Hero from '../../components/Hero'
 import VideosGrid from '../../components/VideosGrid'
