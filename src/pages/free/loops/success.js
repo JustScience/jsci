@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../../../components/5-layout/Layout'
 import Hero from '../../../components/Hero'
-import PageTitle from '../../../components/PageTitle'
+import PageTitle from '../../../components/1-elements/PageTitle'
 import FreebieGallery from '../../../components/FreebieGallery'
 import AudioProduct from '../../../components/AudioProduct'
 

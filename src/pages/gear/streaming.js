@@ -4,8 +4,8 @@ import React from 'react'
 import SearchEngine from "../../components/SEO/SearchEngine"
 import Layout from '../../components/5-layout/Layout'
 import Hero from '../../components/Hero'
-import PageTitle from '../../components/PageTitle'
-import SectionTitle from '../../components/SectionTitle'
+import PageTitle from '../../components/1-elements/PageTitle'
+import SectionTitle from '../../components/1-elements/SectionTitle'
 import GearCard from '../../components/GearCard'
 import { GearList } from '../../components/GearCard/style'
 
