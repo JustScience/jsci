@@ -3,8 +3,8 @@ import { navigate } from 'gatsby'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
 import { SearchWrap, SearchButton } from './style'
-import Icon from '../Icon'
-import Input from '../Input'
+import Icon from '../1-elements/Icon'
+import Input from '../1-elements/Input'
 
 export default function Search() {
     const [searchTerm, setSearchTerm] = React.useState('')

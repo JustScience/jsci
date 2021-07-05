@@ -1,6 +1,6 @@
 import React from 'react'
 import Contain from '../1-elements/Contain'
-import Icon from '../Icon'
+import Icon from '../1-elements/Icon'
 import { LinkTreeWrap, SocialCard } from './style'
 
 export default function LinkTree() {

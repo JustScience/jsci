@@ -4,7 +4,7 @@ import SearchEngine from "../../components/SEO/SearchEngine"
 import Layout from '../../components/5-layout/Layout'
 import Contain from '../../components/1-elements/Contain'
 import Hero from '../../components/Hero'
-import Icon from '../../components/Icon'
+import Icon from '../../components/1-elements/Icon'
 import { LinkGalleryWrap, LinkCard } from '../../components/LinksGallery/style'
 
 export default function GearPage({location}) {

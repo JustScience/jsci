@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import color from '../../0-theme/Color.js'
 
 import { MobileNavItem, MobileNavWrap, MobileNavTrigger, MobileNavHeaderWrap } from './style.js'
-import Icon from '../../Icon'
+import Icon from '../../1-elements/Icon'
 import Cart from '../../Cart'
 
 const activeStyle = {

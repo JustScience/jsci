@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ProductContext from '../../context/ProductContext'
 import CategoryFilterItem from '../FilterItem'
-import Icon from '../Icon'
+import Icon from '../1-elements/Icon'
 import { FiltersWrap, FilterMenuTrigger } from './style'
 
 export default function Filters() {
