@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import CartContext from '../../context/CartContext'
+import CartContext from '../../../context/CartContext'
 import CartWrap from './style'
-import Icon from '../1-elements/Icon'
+import Icon from '../../1-elements/Icon'
 
 export default function Cart() {
     const {checkout} = React.useContext(CartContext)

@@ -11,7 +11,7 @@ import Contain from '../components/1-elements/Contain'
 import AudioPreview from '../components/2-blocks/AudioPreview';
 import ProductPage from '../components/4-pages/ProductPage'
 import ProductImageGallery from './product-image-gallery'
-import ProductQuantityAdder from '../components/Cart/ProductQuantityAdder'
+import ProductQuantityAdder from '../components/3-sections/Cart/ProductQuantityAdder'
 import { 
     ProductInfo, 
     ProductTitle, 

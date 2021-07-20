@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import CartContext from '../../context/CartContext'
+import CartContext from '../../../context/CartContext'
 
 const Input = styled.input`
     /* border: 2px solid red; */

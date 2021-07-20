@@ -3,7 +3,7 @@ import color from '../../0-theme/Color.js'
 
 import { MobileNavItem, MobileNavWrap, MobileNavTrigger, MobileNavHeaderWrap } from './style.js'
 import Icon from '../../1-elements/Icon'
-import Cart from '../../Cart'
+import Cart from '../../3-sections/Cart'
 
 const activeStyle = {
     background: "rgba(0,0,0,0.3)", 

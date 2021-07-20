@@ -5,7 +5,6 @@ import Layout from '../components/5-layout/Layout'
 // import HomepageCollectionsGrid from '../components/HomepageCollectionsGrid'
 import FeaturedProducts from "../components/FeaturedProducts"
 import Hero from '../components/3-sections/Hero'
-// import Banner from '../components/Banner'
 import Section from '../components/1-elements/Section'
 // import Button from '../components/Button'
 import SearchEngine from "../components/0-theme/SEO/SearchEngine"

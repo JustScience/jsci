@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import { useLocation } from '@reach/router'
-import Checkbox from '../1-elements/Checkbox'
+import Checkbox from '../../1-elements/Checkbox'
 import FilterItemWrap from './style'
 import queryString from 'query-string'
 

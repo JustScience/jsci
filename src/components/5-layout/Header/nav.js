@@ -2,7 +2,7 @@ import React from 'react'
 import color from '../../0-theme/Color.js'
 
 import { NavWrap, NavItem } from './style.js'
-import Cart from '../../Cart'
+import Cart from '../../3-sections/Cart'
 
 const activeStyle = {
     background: "rgba(0,0,0,0.3)", 
