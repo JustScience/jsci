@@ -3,7 +3,7 @@ import ProductContext from '../context/ProductContext'
 
 import Layout from '../components/5-layout/Layout'
 // import HomepageCollectionsGrid from '../components/HomepageCollectionsGrid'
-import FeaturedProducts from "../components/FeaturedProducts"
+import FeaturedProducts from "../components/4-pages/FeaturedProducts"
 import Hero from '../components/3-sections/Hero'
 import Section from '../components/1-elements/Section'
 // import Button from '../components/Button'

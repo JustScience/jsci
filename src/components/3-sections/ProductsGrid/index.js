@@ -1,11 +1,11 @@
 import React from 'react'
-import ProductTile from '../ProductTile'
-import ProductsGridWrap from './style'
+import ProductTile from '../../ProductTile'
+import Gallery from '../Gallery'
 
 export default function ProductsGrid({products}) {
     
     return (
-        <ProductsGridWrap>
+        <Gallery product='true'>
             {products.map(product => {
                 return(
                     <ProductTile 
@@ -18,6 +18,6 @@ export default function ProductsGrid({products}) {
                     />
                 )
             })}
-        </ProductsGridWrap>
+        </Gallery>
     )
 }

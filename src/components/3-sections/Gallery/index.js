@@ -1,9 +1,12 @@
 import React from 'react'
 import GalleryWrap from './style'
 
-export default function Gallery({children, small}) {
+export default function Gallery({children, small, product}) {
     return (
-        <GalleryWrap small={small}>
+        <GalleryWrap 
+            small={small}
+            product={product}
+        >
             { children }
         </GalleryWrap>
     )

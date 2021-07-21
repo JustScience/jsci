@@ -1,6 +1,6 @@
 import React from 'react'
-import ProductContext from '../../context/ProductContext'
-import FeaturedProductsGrid from '../FeaturedProductsGrid'
+import ProductContext from '../../../context/ProductContext'
+import FeaturedProductsGrid from '../../3-sections/FeaturedProductsGrid'
 
 export default function FeaturedProducts() {
     const {collections} = React.useContext(ProductContext)

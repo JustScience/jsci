@@ -6,7 +6,7 @@ import Layout from '../../components/5-layout/Layout'
 import Section from '../../components/1-elements/Section'
 import PageTitle from '../../components/1-elements/PageTitle'
 import Hero from '../../components/3-sections/Hero'
-import VideosGrid from '../../components/VideosGrid'
+import VideosGrid from '../../components/3-sections/VideosGrid'
 
 export default function YouTubePage({data, location}) {
     const videos = data.allYoutubeVideo.edges
@@ -45,7 +45,7 @@ query MyQuery {
                 videoId
                 localThumbnail {
                     childImageSharp {
-                        gatsbyImageData(width:120)
+                        gatsbyImageData(width:240)
                     }
                 }
             }

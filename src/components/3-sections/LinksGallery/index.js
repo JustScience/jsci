@@ -1,8 +1,8 @@
 import React from 'react'
-import Contain from '../1-elements/Contain'
-import Icon from '../1-elements/Icon'
-import Gallery from '../3-sections/Gallery'
-import LinkCard from '../2-blocks/LinkCard'
+import Contain from '../../1-elements/Contain'
+import Icon from '../../1-elements/Icon'
+import Gallery from '../Gallery'
+import LinkCard from '../../2-blocks/LinkCard'
 
 export default function LinksGallery() {
     return (

@@ -1,10 +1,10 @@
 import React from 'react'
-import FeaturedProductTile from '../FeaturedProductTile'
-import FeaturedProductsGridWrap from './style'
+import FeaturedProductTile from '../../FeaturedProductTile'
+import Gallery from '../Gallery'
 
 export default function FeaturedProductsGrid({products}) {
     return (
-        <FeaturedProductsGridWrap>
+        <Gallery>
             {products.map(product => {
                 return(
                     <FeaturedProductTile 
@@ -15,6 +15,6 @@ export default function FeaturedProductsGrid({products}) {
                     />
                 )
             })}
-        </FeaturedProductsGridWrap>
+        </Gallery>
     )
 }

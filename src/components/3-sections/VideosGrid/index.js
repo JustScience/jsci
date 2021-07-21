@@ -1,8 +1,8 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Gallery from '../../components/3-sections/Gallery'
-import LinkCard from '../../components/2-blocks/LinkCard'
-import { CardImage } from './style'
+import Gallery from '../Gallery'
+import LinkCard from '../../2-blocks/LinkCard'
+import CardImage from './style'
 
 export default function VideosGrid({videos}) {
     return (
