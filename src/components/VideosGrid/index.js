@@ -1,22 +1,20 @@
 import React from 'react'
-import { Link } from "gatsby"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
-import { VideosGridWrap, VideoCard, CardImage } from './style'
+import Gallery from '../../components/3-sections/Gallery'
+import LinkCard from '../../components/2-blocks/LinkCard'
+import { CardImage } from './style'
 
 export default function VideosGrid({videos}) {
     return (
-        <VideosGridWrap>
+        <Gallery>
             {videos.map(video => (
-                <VideoCard>
-                    <Link to={`/video/${video.node.videoId}`}>
-                        <CardImage>
-                            <GatsbyImage image={getImage(video.node.localThumbnail)} />
-                        </CardImage>
-                        <p>{video.node.title}</p>
-                    </Link>
-                </VideoCard>
+                <LinkCard to={`/video/${video.node.videoId}`} ghost='true'>
+                    <CardImage>
+                        <GatsbyImage image={getImage(video.node.localThumbnail)} />
+                    </CardImage>
+                    <span>{video.node.title}</span>
+                </LinkCard>
             ))}
-        </VideosGridWrap>
+        </Gallery>
     )
 }

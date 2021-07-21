@@ -1,12 +1,13 @@
 import React from 'react'
 import Contain from '../1-elements/Contain'
 import Icon from '../1-elements/Icon'
-import { LinkGalleryWrap, LinkCard } from './style'
+import Gallery from '../3-sections/Gallery'
+import LinkCard from '../2-blocks/LinkCard'
 
 export default function LinksGallery() {
     return (
         <Contain>
-            <LinkGalleryWrap>
+            <Gallery small='true'>
                 <LinkCard to="/free/loops">
                     <Icon shape="piano" color="white" size="48px" />
                     <span>Free Melody Loops</span>
@@ -19,7 +20,7 @@ export default function LinksGallery() {
                     <Icon shape="music" color="white" size="48px" />
                     <span>Free Sync Music</span>
                 </LinkCard>
-            </LinkGalleryWrap>
+            </Gallery>
         </Contain>
     )
 }

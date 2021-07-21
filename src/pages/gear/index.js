@@ -5,7 +5,9 @@ import Layout from '../../components/5-layout/Layout'
 import Contain from '../../components/1-elements/Contain'
 import Hero from '../../components/3-sections/Hero'
 import Icon from '../../components/1-elements/Icon'
-import { LinkGalleryWrap, LinkCard } from '../../components/LinksGallery/style'
+import LinkCard from '../../components/2-blocks/LinkCard'
+import Gallery from '../../components/3-sections/Gallery'
+
 
 export default function GearPage({location}) {
     return (
@@ -14,7 +16,7 @@ export default function GearPage({location}) {
             <Layout location={location} crumbLabel="My Studio" >
                 <Hero />
                 <Contain>
-                    <LinkGalleryWrap>
+                    <Gallery small='true'>
                         <LinkCard to="/gear/music">
                             <Icon shape="piano" color="white" size="48px" />
                             <span>Music Studio Gear</span>
@@ -27,7 +29,7 @@ export default function GearPage({location}) {
                             <Icon shape="gamer" color="white" size="48px" />
                             <span>Live Stream Gear</span>
                         </LinkCard>
-                    </LinkGalleryWrap>
+                    </Gallery>
                 </Contain>
             </Layout>
         </>
